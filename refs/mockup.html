@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Débora Blaso | Psicologia & Moda</title>
+    <meta name="description" content="Psicologia que veste, moda que liberta. Consultoria de imagem e psicologia clínica com Débora Blaso.">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;0,6..96,600;0,6..96,700;1,6..96,400&family=Pinyon+Script&family=Roboto+Condensed:wght@300;400;700&display=swap" rel="stylesheet">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        monstera: '#2E3628',      /* Primary */
+                        'summer-sand': '#E6E4D9', /* Background */
+                        walnut: '#A27F67',        /* Accent */
+                        ginkgo: '#D1D4B0',        /* Highlight */
+                        muted: '#505050',
+                    },
+                    fontFamily: {
+                        display: ['"Bodoni Moda"', 'serif'],
+                        sans: ['"Roboto Condensed"', 'sans-serif'],
+                        script: ['"Pinyon Script"', 'cursive'],
+                    },
+                    animation: {
+                        'spin-slow': 'spin 12s linear infinite',
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        /* --- Core Styles --- */
+        body {
+            background-color: #E6E4D9;
+            color: #2E3628;
+            overflow-x: hidden;
+        }
+
+        /* Texture Overlay */
+        .bg-noise {
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.04'/%3E%3C/svg%3E");
+            pointer-events: none;
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100%;
+            z-index: 0;
+            mix-blend-mode: multiply;
+        }
+
+        /* Masks */
+        .mask-organic {
+            mask-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill='%23FF0066' d='M44.7,-53.4C58.1,-40.7,69.3,-26.3,73.8,-9.8C78.3,6.7,76.1,25.3,66.9,39.7C57.7,54.1,41.5,64.3,24.3,70.6C7.1,76.9,-11.1,79.3,-27.9,73.9C-44.7,68.5,-60.1,55.3,-70.1,38.8C-80.1,22.3,-84.7,2.5,-80.3,-14.8C-75.9,-32.1,-62.5,-46.9,-47.3,-59.1C-32.1,-71.3,-16,-80.9,-0.3,-80.5C15.4,-80.1,31.3,-66.1,44.7,-53.4Z' transform='translate(100 100)' /%3E%3C/svg%3E");
+            mask-size: contain; mask-repeat: no-repeat; mask-position: center;
+        }
+
+        /* 3D Flip Cards */
+        .flip-card {
+            perspective: 1000px;
+            cursor: pointer;
+        }
+        .flip-card-inner {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            transition: transform 0.8s cubic-bezier(0.34, 1.56, 0.64, 1);
+            transform-style: preserve-3d;
+        }
+        .flip-card.flipped .flip-card-inner {
+            transform: rotateY(180deg);
+        }
+        .flip-card-front, .flip-card-back {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
+            border-radius: 2rem;
+            top: 0; left: 0;
+        }
+        .flip-card-back {
+            transform: rotateY(180deg);
+        }
+
+        /* Scroll Reveal */
+        .reveal {
+            opacity: 0;
+            transform: translateY(40px);
+            transition: all 1s ease-out;
+        }
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .delay-200 { transition-delay: 200ms; }
+
+        /* Navbar Blur */
+        .nav-scrolled {
+            padding-top: 1rem;
+            padding-bottom: 1rem;
+            background-color: rgba(230, 228, 217, 0.95);
+            backdrop-filter: blur(12px);
+            box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+        }
+    </style>
+</head>
+<body class="selection:bg-monstera selection:text-ginkgo">
+
+    <div class="bg-noise"></div>
+
+    <!-- 1. HEADER -->
+    <header id="main-header" class="fixed w-full z-50 transition-all duration-300 py-8 px-6 md:px-12 top-0 left-0">
+        <div class="max-w-7xl mx-auto flex justify-between items-center">
+            <a href="#" class="flex flex-col group z-50">
+                <span class="font-display text-2xl font-bold tracking-tight text-monstera">DÉBORA BLASO</span>
+                <span class="text-[9px] uppercase tracking-[0.25em] font-bold opacity-60">Psychology & Fashion</span>
+            </a>
+
+            <!-- Desktop Nav -->
+            <nav class="hidden lg:flex items-center gap-8 text-[11px] font-bold uppercase tracking-[0.2em] text-monstera">
+                <a href="#sobre" class="hover:text-walnut transition-colors relative py-1 hover:after:w-full after:absolute after:bottom-0 after:left-0 after:w-0 after:h-px after:bg-walnut after:transition-all">Sobre</a>
+                <a href="#motivos" class="hover:text-walnut transition-colors relative py-1 hover:after:w-full after:absolute after:bottom-0 after:left-0 after:w-0 after:h-px after:bg-walnut after:transition-all">Motivos</a>
+                <a href="#como-funciona" class="hover:text-walnut transition-colors relative py-1 hover:after:w-full after:absolute after:bottom-0 after:left-0 after:w-0 after:h-px after:bg-walnut after:transition-all">Como Funciona</a>
+                <a href="#servicos" class="hover:text-walnut transition-colors relative py-1 hover:after:w-full after:absolute after:bottom-0 after:left-0 after:w-0 after:h-px after:bg-walnut after:transition-all">O Clube</a>
+                <a href="https://wa.me/5500000000000" target="_blank" class="bg-monstera text-summer-sand px-6 py-2 rounded-sm hover:bg-walnut hover:text-white transition-all shadow-lg">Agendar</a>
+            </nav>
+
+            <!-- Mobile Toggle -->
+            <button id="menu-btn" class="lg:hidden z-50 text-monstera p-2">
+                <i data-lucide="menu" class="w-8 h-8"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- Mobile Menu Overlay -->
+    <div id="mobile-menu" class="fixed inset-0 bg-summer-sand/98 z-40 transition-transform duration-500 translate-x-full flex flex-col justify-center items-center gap-8">
+        <nav class="flex flex-col gap-8 text-center text-3xl font-display text-monstera">
+            <a href="#sobre" class="hover:text-walnut mobile-link">Sobre</a>
+            <a href="#motivos" class="hover:text-walnut mobile-link">Motivos</a>
+            <a href="#como-funciona" class="hover:text-walnut mobile-link">Como Funciona</a>
+            <a href="#servicos" class="hover:text-walnut mobile-link">O Clube</a>
+            <a href="https://wa.me/5500000000000" target="_blank" class="text-sm font-sans uppercase tracking-widest bg-monstera text-ginkgo px-10 py-4 mt-4 shadow-xl">Agendar WhatsApp</a>
+        </nav>
+    </div>
+
+    <main>
+        <!-- 2. HERO -->
+        <section class="relative min-h-screen flex items-center pt-20 px-6 md:px-12 overflow-hidden">
+            <div class="absolute top-0 right-0 w-[50vw] h-[50vw] bg-ginkgo/20 rounded-full blur-[120px] -z-10 translate-x-1/3 -translate-y-1/3"></div>
+            
+            <div class="max-w-7xl mx-auto w-full grid grid-cols-1 lg:grid-cols-12 gap-16 items-center">
+                <div class="lg:col-span-7 z-10 reveal">
+                    <div class="flex items-center gap-3 mb-8">
+                        <span class="w-12 h-px bg-walnut"></span>
+                        <span class="text-[10px] uppercase tracking-[0.25em] font-bold text-walnut">Psicologia Clínica & Imagem</span>
+                    </div>
+                    
+                    <h1 class="font-display text-6xl md:text-8xl lg:text-[6.5rem] leading-[0.9] tracking-tight mb-10 text-monstera">
+                        PSICOLOGIA <br>
+                        <span class="font-script font-normal text-5xl lg:text-7xl text-walnut block -mt-2 mb-2">que veste,</span>
+                        MODA <br>
+                        <span class="font-script font-normal text-5xl lg:text-7xl text-walnut block -mt-2">que liberta.</span>
+                    </h1>
+
+                    <p class="text-lg lg:text-xl max-w-lg text-muted mb-12 leading-relaxed pl-6 border-l-2 border-ginkgo">
+                        Um mergulho na beleza que nasce de dentro. Traduzindo complexidades em caminhos possíveis através da imagem.
+                    </p>
+
+                    <div class="flex flex-col sm:flex-row gap-4">
+                        <a href="#sobre" class="inline-flex items-center justify-center h-14 px-10 bg-monstera text-white text-xs font-bold uppercase tracking-[0.2em] shadow-2xl hover:bg-walnut transition-all group">
+                            Conhecer a Profissional <i data-lucide="arrow-right" class="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="lg:col-span-5 relative h-[60vh] lg:h-[80vh] reveal delay-200">
+                    <div class="w-full h-full relative group">
+                        <div class="absolute inset-0 bg-ginkgo/20 mask-organic translate-x-4 translate-y-4"></div>
+                        <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=1976&auto=format&fit=crop" 
+                             alt="Débora Blaso Psicóloga" 
+                             class="w-full h-full object-cover mask-organic relative z-10 grayscale-[10%] group-hover:grayscale-0 transition-all duration-1000">
+                    </div>
+                </div>
+            </div>
+            
+            <a href="#sobre" class="absolute bottom-10 left-1/2 -translate-x-1/2 animate-bounce p-4 text-monstera hover:text-walnut transition-colors">
+                <i data-lucide="arrow-down" class="w-6 h-6"></i>
+            </a>
+        </section>
+
+        <!-- 3. SOBRE MIM -->
+        <section id="sobre" class="py-32 px-6 md:px-12 bg-white/40 backdrop-blur-sm scroll-mt-20">
+            <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-24 items-start">
+                <div class="order-2 lg:order-1 reveal">
+                    <h2 class="font-display text-5xl lg:text-7xl tracking-tighter leading-none mb-10 text-monstera">
+                        Quem é <br> <span class="italic text-walnut font-script text-6xl lg:text-7xl">Débora Blaso?</span>
+                    </h2>
+                    <div class="space-y-6 text-lg text-muted leading-relaxed text-justify lg:text-left font-sans">
+                        <p>Sou psicóloga clínica formada pela <strong>UFSC</strong>, com uma trajetória singular que une o olhar humano da psicologia às formações exatas em finanças.</p>
+                        <p>Minha prática é fundamentada no rigor científico da <strong>TCC</strong> e na sensibilidade da Psicologia da Moda. Traduzo finanças e imagem com o <strong>"modo humanas"</strong> ativado.</p>
+                    </div>
+                    
+                    <div class="mt-12 space-y-12">
+                        <div>
+                            <span class="text-[10px] uppercase tracking-[0.25em] font-bold text-walnut block mb-6 border-b border-monstera/10 pb-2">Formações & Certificações</span>
+                            <ul class="space-y-4">
+                                <li class="flex items-center gap-4 text-monstera font-bold text-sm"><i data-lucide="graduation-cap" class="w-5 h-5 text-walnut"></i> Psicologia - UFSC</li>
+                                <li class="flex items-center gap-4 text-monstera font-bold text-sm"><i data-lucide="globe" class="w-5 h-5 text-walnut"></i> Gestão de Investimentos - Univ. Genève</li>
+                                <li class="flex items-center gap-4 text-monstera font-bold text-sm"><i data-lucide="award" class="w-5 h-5 text-walnut"></i> Certificação CEA ANBIMA</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <span class="text-[10px] uppercase tracking-[0.25em] font-bold text-walnut block mb-6 border-b border-monstera/10 pb-2">Valores Pessoais</span>
+                            <div class="grid grid-cols-2 gap-4">
+                                <!-- Dynamically generated via JS logic or static here -->
+                                <div class="flex items-center gap-2"><div class="w-1.5 h-1.5 rounded-full bg-walnut"></div><span class="text-sm font-bold text-monstera">Firmeza</span></div>
+                                <div class="flex items-center gap-2"><div class="w-1.5 h-1.5 rounded-full bg-walnut"></div><span class="text-sm font-bold text-monstera">Elegância</span></div>
+                                <div class="flex items-center gap-2"><div class="w-1.5 h-1.5 rounded-full bg-walnut"></div><span class="text-sm font-bold text-monstera">Independência</span></div>
+                                <div class="flex items-center gap-2"><div class="w-1.5 h-1.5 rounded-full bg-walnut"></div><span class="text-sm font-bold text-monstera">Lealdade</span></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="order-1 lg:order-2 relative w-full aspect-[4/5] lg:h-[800px] reveal delay-200 lg:sticky lg:top-32">
+                    <div class="absolute inset-0 bg-walnut/20 mask-organic -scale-x-100 -translate-x-6 -translate-y-6"></div>
+                    <img src="https://images.unsplash.com/photo-1490481651871-ab68de25d43d?q=80&w=2070&auto=format&fit=crop" 
+                         alt="Débora Blaso Retrato" 
+                         class="w-full h-full object-cover mask-organic -scale-x-100 relative z-10 shadow-2xl">
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. MOTIVOS (FLIP CARDS) -->
+        <section id="motivos" class="py-32 px-6 md:px-12 bg-monstera text-summer-sand scroll-mt-20">
+            <div class="max-w-7xl mx-auto">
+                <div class="text-center mb-20 reveal">
+                    <h2 class="font-display text-4xl lg:text-6xl tracking-tighter mb-6 leading-tight">
+                        Cada pessoa tem um motivo <br>para fazer terapia. <span class="text-ginkgo italic font-script">Qual é o seu?</span>
+                    </h2>
+                    <p class="text-[10px] uppercase tracking-[0.25em] font-bold opacity-60">Toque nos cards para revelar</p>
+                </div>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <!-- Card 1 -->
+                    <div class="flip-card h-[400px]">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front bg-white text-monstera border border-white/10 p-10 flex flex-col justify-between shadow-lg">
+                                <div class="w-14 h-14 bg-summer-sand rounded-full flex items-center justify-center mb-4"><i data-lucide="eye" class="w-6 h-6 text-walnut"></i></div>
+                                <h3 class="font-display text-3xl leading-tight">Corpo, aparência <br>& autoestima</h3>
+                                <div class="mt-auto pt-8 border-t border-monstera/10 w-full flex justify-between items-center opacity-50"><span class="text-[10px] uppercase tracking-[0.25em] font-bold">Ver Detalhes</span><i data-lucide="plus" class="w-4 h-4"></i></div>
+                            </div>
+                            <div class="flip-card-back bg-walnut text-white p-10 flex flex-col justify-center text-center">
+                                <h4 class="font-display text-2xl mb-4 italic">Autoestima</h4>
+                                <p class="text-base leading-relaxed font-sans">Dificuldade de reconhecer qualidades, sensação de inadequação constante.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Card 2 -->
+                    <div class="flip-card h-[400px]">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front bg-white text-monstera border border-white/10 p-10 flex flex-col justify-between shadow-lg">
+                                <div class="w-14 h-14 bg-summer-sand rounded-full flex items-center justify-center mb-4"><i data-lucide="fingerprint" class="w-6 h-6 text-walnut"></i></div>
+                                <h3 class="font-display text-3xl leading-tight">Expressão de <br>Identidade</h3>
+                                <div class="mt-auto pt-8 border-t border-monstera/10 w-full flex justify-between items-center opacity-50"><span class="text-[10px] uppercase tracking-[0.25em] font-bold">Ver Detalhes</span><i data-lucide="plus" class="w-4 h-4"></i></div>
+                            </div>
+                            <div class="flip-card-back bg-walnut text-white p-10 flex flex-col justify-center text-center">
+                                <h4 class="font-display text-2xl mb-4 italic">Identidade</h4>
+                                <p class="text-base leading-relaxed font-sans">Relação conflituosa com o espelho. Quando a roupa atua como barreira.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Card 3 -->
+                    <div class="flip-card h-[400px]">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front bg-white text-monstera border border-white/10 p-10 flex flex-col justify-between shadow-lg">
+                                <div class="w-14 h-14 bg-summer-sand rounded-full flex items-center justify-center mb-4"><i data-lucide="hourglass" class="w-6 h-6 text-walnut"></i></div>
+                                <h3 class="font-display text-3xl leading-tight">Futuro & <br>Planejamento</h3>
+                                <div class="mt-auto pt-8 border-t border-monstera/10 w-full flex justify-between items-center opacity-50"><span class="text-[10px] uppercase tracking-[0.25em] font-bold">Ver Detalhes</span><i data-lucide="plus" class="w-4 h-4"></i></div>
+                            </div>
+                            <div class="flip-card-back bg-walnut text-white p-10 flex flex-col justify-center text-center">
+                                <h4 class="font-display text-2xl mb-4 italic">Futuro</h4>
+                                <p class="text-base leading-relaxed font-sans">Organização das finanças e da aposentadoria com segurança emocional.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Card 4 -->
+                    <div class="flip-card h-[400px]">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front bg-white text-monstera border border-white/10 p-10 flex flex-col justify-between shadow-lg">
+                                <div class="w-14 h-14 bg-summer-sand rounded-full flex items-center justify-center mb-4"><i data-lucide="sprout" class="w-6 h-6 text-walnut"></i></div>
+                                <h3 class="font-display text-3xl leading-tight">Bem-estar & <br>Presença</h3>
+                                <div class="mt-auto pt-8 border-t border-monstera/10 w-full flex justify-between items-center opacity-50"><span class="text-[10px] uppercase tracking-[0.25em] font-bold">Ver Detalhes</span><i data-lucide="plus" class="w-4 h-4"></i></div>
+                            </div>
+                            <div class="flip-card-back bg-walnut text-white p-10 flex flex-col justify-center text-center">
+                                <h4 class="font-display text-2xl mb-4 italic">Bem-estar</h4>
+                                <p class="text-base leading-relaxed font-sans">Encontrar o seu ritmo em um jeito prático e acolhedor de viver.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 5. COMO FUNCIONA -->
+        <section id="como-funciona" class="py-32 px-6 md:px-12 bg-summer-sand scroll-mt-20">
+            <div class="max-w-7xl mx-auto">
+                <div class="mb-20 reveal">
+                    <span class="text-[10px] uppercase tracking-[0.25em] font-bold text-walnut block mb-4">Passo a Passo</span>
+                    <h2 class="font-display text-5xl lg:text-7xl text-monstera">Como funciona?</h2>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <!-- Steps -->
+                    <div class="p-10 border border-monstera/10 hover:border-walnut/50 transition-colors reveal bg-white rounded-[2.5rem]">
+                        <span class="font-display text-6xl text-walnut/20 mb-6 block">01</span>
+                        <h3 class="font-display text-2xl text-monstera mb-4">Escolha o Formato</h3>
+                        <p class="text-muted leading-relaxed">Atendimento Online (Global) ou Presencial em Florianópolis.</p>
+                    </div>
+                    <div class="p-10 border border-monstera/10 hover:border-walnut/50 transition-colors reveal bg-white rounded-[2.5rem]">
+                        <span class="font-display text-6xl text-walnut/20 mb-6 block">02</span>
+                        <h3 class="font-display text-2xl text-monstera mb-4">Agende sua Sessão</h3>
+                        <p class="text-muted leading-relaxed">Entre em contato pelo WhatsApp para verificar disponibilidade.</p>
+                    </div>
+                    <div class="p-10 border border-monstera/10 hover:border-walnut/50 transition-colors reveal bg-white rounded-[2.5rem]">
+                        <span class="font-display text-6xl text-walnut/20 mb-6 block">03</span>
+                        <h3 class="font-display text-2xl text-monstera mb-4">Seu Ritmo</h3>
+                        <p class="text-muted leading-relaxed">Definimos a frequência e o plano terapêutico ideal para sua necessidade.</p>
+                    </div>
+                </div>
+                <div class="mt-16 p-6 bg-walnut/10 rounded-2xl border border-walnut/20 flex gap-4 items-start max-w-2xl mx-auto reveal">
+                    <div class="bg-walnut p-2 rounded-full shrink-0"><i data-lucide="check-circle" class="w-4 h-4 text-white"></i></div>
+                    <div>
+                        <h4 class="font-bold text-monstera text-sm uppercase tracking-wide mb-1">Nota sobre Convênios</h4>
+                        <p class="text-sm text-monstera/80 leading-relaxed">Atendimentos particulares. Não aceitamos convênios diretamente, mas fornecemos recibo para solicitação de reembolso.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 6. ABORDAGEM -->
+        <section id="abordagem" class="py-32 px-6 md:px-12 bg-monstera text-ginkgo scroll-mt-20">
+            <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
+                <div class="reveal">
+                    <span class="text-[10px] uppercase tracking-[0.25em] font-bold text-ginkgo block mb-6 opacity-60">Metodologia</span>
+                    <h2 class="font-display text-5xl lg:text-7xl mb-8 leading-none text-white">Abordagem <br><span class="italic text-walnut font-script text-4xl lg:text-6xl">Científica.</span></h2>
+                    <p class="text-lg opacity-80 leading-relaxed mb-10 text-white">
+                        Utilizo a TCC (Terapia Cognitivo-Comportamental) integrada às terapias contextuais contemporâneas. Estruturada, mas profundamente humana.
+                    </p>
+                </div>
+                <div class="grid grid-cols-1 gap-6">
+                    <div class="bg-white/5 border border-white/10 text-white p-8 rounded-[2.5rem]">
+                        <h3 class="font-display text-3xl mb-2 text-ginkgo">FAP</h3>
+                        <p class="text-sm opacity-70 font-sans">Terapia Analítica Funcional: Foco nas relações interpessoais e conexões autênticas.</p>
+                    </div>
+                    <div class="bg-white/5 border border-white/10 text-white p-8 rounded-[2.5rem]">
+                        <h3 class="font-display text-3xl mb-2 text-walnut">ACT</h3>
+                        <p class="text-sm opacity-70 font-sans">Terapia de Aceitação e Compromisso: Lidar com emoções desconfortáveis e agir conforme seus valores.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 7. AGENDAR -->
+        <section class="py-24 px-6 bg-ginkgo text-monstera text-center">
+            <div class="max-w-4xl mx-auto reveal">
+                <h2 class="font-display text-4xl mb-8">Pronta para iniciar sua jornada?</h2>
+                <a href="https://wa.me/5500000000000" target="_blank" class="inline-flex items-center justify-center h-16 px-12 bg-monstera text-white text-sm font-bold uppercase tracking-[0.2em] shadow-2xl hover:bg-monstera/90 transition-all rounded-sm">
+                    <i data-lucide="message-circle" class="w-5 h-5 mr-3"></i> Agendar Sessão Agora
+                </a>
+                <p class="mt-6 text-xs font-bold uppercase tracking-widest opacity-60">Resposta em até 24 horas úteis</p>
+            </div>
+        </section>
+
+        <!-- 8. OUTROS SERVIÇOS -->
+        <section id="servicos" class="py-32 px-6 md:px-12 bg-white scroll-mt-20">
+            <div class="max-w-7xl mx-auto">
+                <div class="mb-20 text-center reveal">
+                    <span class="text-[10px] uppercase tracking-[0.25em] font-bold text-walnut block mb-4">Expansão</span>
+                    <h2 class="font-display text-5xl lg:text-7xl text-monstera">Além da clínica.</h2>
+                </div>
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:h-[600px]">
+                    <!-- Clube -->
+                    <div class="relative group overflow-hidden rounded-[3rem] h-[500px] lg:h-full reveal shadow-2xl cursor-pointer">
+                        <div class="absolute inset-0 bg-monstera/90 z-10 transition-colors group-hover:bg-monstera/95"></div>
+                        <img src="https://images.unsplash.com/photo-1567401893414-76b7b1e5a7a5?q=80&w=2070&auto=format&fit=crop" class="absolute inset-0 w-full h-full object-cover grayscale opacity-40 group-hover:scale-105 transition-transform duration-1000" alt="Club" loading="lazy">
+                        <div class="relative z-20 p-12 h-full flex flex-col justify-center items-center text-center text-summer-sand">
+                            <i data-lucide="sparkles" class="w-12 h-12 text-ginkgo mb-6"></i>
+                            <h3 class="font-display text-5xl lg:text-6xl mb-6">Clube de Psicologia <br> <span class="italic font-normal text-walnut">da Moda.</span></h3>
+                            <a href="https://psicologiadamoda.club" target="_blank" class="inline-flex items-center gap-2 bg-ginkgo text-monstera px-8 py-3 rounded-sm text-[10px] font-bold uppercase tracking-widest hover:bg-white transition-all">
+                                Conhecer o Clube <i data-lucide="external-link" class="w-4 h-4"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <!-- Palestras -->
+                    <div class="relative group overflow-hidden rounded-[3rem] h-[500px] lg:h-full reveal shadow-2xl cursor-pointer bg-walnut/5 border border-walnut/20">
+                        <div class="relative z-20 p-12 h-full flex flex-col justify-center items-center text-center text-monstera">
+                            <i data-lucide="mic" class="w-12 h-12 text-walnut mb-6"></i>
+                            <h3 class="font-display text-5xl lg:text-6xl mb-6">Palestras & <br> <span class="italic font-normal text-walnut">Talks.</span></h3>
+                            <a href="https://wa.me/5500000000000" target="_blank" class="inline-flex items-center gap-2 border border-monstera px-8 py-3 rounded-sm text-[10px] font-bold uppercase tracking-widest hover:bg-monstera hover:text-white transition-all">
+                                Solicitar Proposta <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 9. CONECTE-SE (INSTAGRAM) -->
+        <section class="py-32 px-6 md:px-12 bg-summer-sand overflow-hidden">
+            <div class="max-w-7xl mx-auto">
+                <div class="flex flex-col md:flex-row justify-between items-end mb-12 reveal">
+                    <div>
+                        <h2 class="font-display text-4xl lg:text-5xl text-monstera mb-2">Conecte-se</h2>
+                        <a href="https://instagram.com/debora.blaso" target="_blank" class="text-walnut hover:underline flex items-center gap-2 font-bold tracking-wide">
+                            <i data-lucide="instagram" class="w-4 h-4"></i> @debora.blaso
+                        </a>
+                    </div>
+                    <p class="text-muted max-w-md text-right hidden md:block">Insights diários sobre comportamento, estilo e vida real.</p>
+                </div>
+                <!-- Images Hardcoded to Ensure Loading -->
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-4 reveal delay-200">
+                    <div class="aspect-square bg-white rounded-xl overflow-hidden group relative cursor-pointer hover:shadow-xl transition-all">
+                        <img src="https://images.unsplash.com/photo-1550614000-4b9519e007d9?auto=format&fit=crop&w=400&q=80" alt="Instagram" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                    </div>
+                    <div class="aspect-square bg-white rounded-xl overflow-hidden group relative cursor-pointer hover:shadow-xl transition-all">
+                        <img src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&w=400&q=80" alt="Instagram" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                    </div>
+                    <div class="aspect-square bg-white rounded-xl overflow-hidden group relative cursor-pointer hover:shadow-xl transition-all">
+                        <img src="https://images.unsplash.com/photo-1496747611176-843222e1e57c?auto=format&fit=crop&w=400&q=80" alt="Instagram" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                    </div>
+                    <div class="aspect-square bg-white rounded-xl overflow-hidden group relative cursor-pointer hover:shadow-xl transition-all">
+                        <img src="https://images.unsplash.com/photo-1509631179647-b8256206dbe8?auto=format&fit=crop&w=400&q=80" alt="Instagram" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 10. FALE COMIGO -->
+        <section class="py-32 px-6 md:px-12 bg-white border-t border-monstera/5">
+            <div class="max-w-3xl mx-auto text-center reveal">
+                <h2 class="font-display text-5xl lg:text-6xl text-monstera mb-6">Fale Comigo</h2>
+                <p class="text-lg text-muted mb-10 leading-relaxed">
+                    Dúvidas sobre como a terapia funciona ou se este é o momento certo? Estou aqui para esclarecer.
+                </p>
+                <a href="https://wa.me/5500000000000" target="_blank" class="inline-flex items-center gap-3 text-2xl font-display text-walnut hover:text-monstera transition-colors border-b-2 border-walnut hover:border-monstera pb-1">
+                    Iniciar conversa no WhatsApp <i data-lucide="arrow-up-right" class="w-6 h-6"></i>
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <!-- 11. FOOTER -->
+    <footer class="bg-monstera text-white py-16 px-6 md:px-12">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-8 text-center md:text-left">
+            <div>
+                <span class="font-display text-2xl font-bold tracking-tight block">DÉBORA BLASO</span>
+                <span class="text-[10px] uppercase tracking-[0.2em] opacity-60 block mt-2">CRP 12/XXXXX • Psicologia & Imagem</span>
+            </div>
+            <div class="flex gap-8 text-[11px] font-bold uppercase tracking-[0.2em] opacity-80">
+                <a href="#sobre" class="hover:text-walnut transition-colors">Sobre</a>
+                <a href="#servicos" class="hover:text-walnut transition-colors">Serviços</a>
+                <a href="https://instagram.com/debora.blaso" target="_blank" class="hover:text-walnut transition-colors">Instagram</a>
+            </div>
+            <div class="text-[10px] uppercase tracking-[0.2em] opacity-40">© 2025 Todos os direitos reservados.</div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script>
+        // Init Icons
+        lucide.createIcons();
+
+        // Mobile Menu Logic
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const mobileLinks = document.querySelectorAll('.mobile-link');
+        let isMenuOpen = false;
+
+        function toggleMenu() {
+            isMenuOpen = !isMenuOpen;
+            if (isMenuOpen) {
+                mobileMenu.classList.remove('translate-x-full');
+                menuBtn.innerHTML = '<i data-lucide="x" class="w-8 h-8"></i>';
+            } else {
+                mobileMenu.classList.add('translate-x-full');
+                menuBtn.innerHTML = '<i data-lucide="menu" class="w-8 h-8"></i>';
+            }
+            lucide.createIcons();
+        }
+
+        menuBtn.addEventListener('click', toggleMenu);
+        mobileLinks.forEach(link => link.addEventListener('click', () => {
+            toggleMenu(); // Close on click
+        }));
+
+        // Navbar Scroll
+        const header = document.getElementById('main-header');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                header.classList.add('nav-scrolled');
+                header.classList.remove('py-8');
+            } else {
+                header.classList.remove('nav-scrolled');
+                header.classList.add('py-8');
+            }
+        });
+
+        // Flip Cards
+        document.querySelectorAll('.flip-card').forEach(card => {
+            card.addEventListener('click', () => {
+                card.classList.toggle('flipped');
+            });
+        });
+
+        // Reveal Animation
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                }
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+    </script>
+</body>
+</html>
