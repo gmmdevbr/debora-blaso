@@ -1,73 +1,135 @@
-# React + TypeScript + Vite
+# Débora Blaso | Psicologia & Moda
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Professional website for Débora Blaso, a clinical psychologist specializing in psychology and fashion consulting.
 
-Currently, two official plugins are available:
+## 🎯 Project Overview
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+This website serves as both a digital presence and a conversion funnel, combining scientific authority with editorial sophistication. It's designed to convey expertise in clinical psychology while maintaining a high-end fashion aesthetic.
 
-## React Compiler
+## 🛠 Tech Stack
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- **Framework**: React 19 + Vite
+- **Styling**: Tailwind CSS v4 (CSS-First Architecture)
+- **Components**: Custom components with shadcn/ui principles
+- **Icons**: Lucide React
+- **Language**: TypeScript
 
-## Expanding the ESLint configuration
+## 🚀 Getting Started
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+### Prerequisites
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+- Node.js 18+
+- pnpm (recommended) or npm
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+### Installation
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```bash
+# Install dependencies
+pnpm install
+
+# Start development server
+pnpm run dev
+
+# Build for production
+pnpm run build
+
+# Preview production build
+pnpm run preview
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## 📁 Project Structure
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
 ```
+src/
+├── components/          # React components
+│   ├── Header.tsx      # Navigation with mobile menu
+│   ├── Hero.tsx        # Hero section with organic masks
+│   ├── About.tsx       # About section with sticky layout
+│   ├── Motivos.tsx     # Flip cards section
+│   ├── ComoFunciona.tsx # How it works steps
+│   ├── Abordagem.tsx   # Methodology section
+│   ├── Agendar.tsx     # CTA section
+│   ├── Services.tsx    # Additional services grid
+│   ├── Instagram.tsx   # Social media showcase
+│   ├── Contact.tsx     # Contact section
+│   └── Footer.tsx      # Footer with links
+├── hooks/              # Custom React hooks
+│   ├── useScrollReveal.ts
+│   └── useNavbarScroll.ts
+├── lib/                # Utilities
+│   └── utils.ts        # Helper functions
+├── index.css           # Tailwind v4 theme & custom styles
+├── App.tsx             # Main app component
+└── main.tsx            # Entry point
+```
+
+## 🎨 Design System
+
+### Typography
+
+- **Display**: Bodoni Moda (Serif, elegant)
+- **Body**: Roboto Condensed (Sans, technical)
+- **Script**: Pinyon Script (Cursive, signature)
+
+### Color Palette
+
+- **Monstera** (#2E3628): Primary text/dark backgrounds
+- **Summer Sand** (#E6E4D9): Background
+- **Walnut** (#A27F67): Accent color
+- **Ginkgo** (#D1D4B0): Highlight color
+- **Muted** (#505050): Secondary text
+
+### Key Features
+
+- **Noise Texture Overlay**: Subtle grain for editorial feel
+- **Organic Masks**: Blob-shaped image masks
+- **3D Flip Cards**: Interactive cards with backface content
+- **Scroll Reveal**: Elements animate into view on scroll
+- **Glassmorphism Navbar**: Blurred background when scrolled
+
+## 🎯 SEO Optimization
+
+- Semantic HTML5 structure (`<header>`, `<main>`, `<section>`, `<article>`, `<footer>`)
+- Meta tags for social media (Open Graph)
+- Alt text on all images
+- Proper heading hierarchy (H1-H3)
+- Portuguese language optimization
+
+## 📱 Responsive Design
+
+- Mobile-first approach
+- Immersive mobile menu overlay
+- Adaptive layouts for all screen sizes
+- Touch-optimized interactions
+
+## ⚡ Performance
+
+- Lazy loading for images
+- Preconnect to external resources
+- Optimized asset loading
+- CSS-based animations (no heavy libraries)
+
+## 🔧 Tailwind v4 Configuration
+
+This project uses Tailwind CSS v4's new architecture with `@theme` directive in the main CSS file instead of JavaScript configuration. All design tokens are defined in [src/index.css](src/index.css).
+
+## 📄 License
+
+© 2025 Débora Blaso. All rights reserved.
+
+## 🤝 Development
+
+This project follows strict principles:
+
+1. **Tailwind v4 First**: All styling via CSS variables and Tailwind classes
+2. **Semantic HTML**: Proper HTML5 structure for SEO
+3. **Accessibility**: ARIA labels, keyboard navigation, screen reader support
+4. **Performance**: Optimized images, minimal JavaScript, efficient rendering
+5. **Mobile First**: Responsive design starting from mobile breakpoints
+
+## 📞 Contact
+
+For professional inquiries, please contact through:
+- WhatsApp: [Link]
+- Instagram: [@debora.blaso](https://instagram.com/debora.blaso)
+- Website: [psicologiadamoda.club](https://psicologiadamoda.club)

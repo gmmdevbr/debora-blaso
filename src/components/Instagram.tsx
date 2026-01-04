@@ -1,0 +1,48 @@
+import { Instagram as InstagramIcon } from 'lucide-react';
+
+const images = [
+  'https://images.unsplash.com/photo-1550614000-4b9519e007d9?auto=format&fit=crop&w=400&q=80',
+  'https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&w=400&q=80',
+  'https://images.unsplash.com/photo-1496747611176-843222e1e57c?auto=format&fit=crop&w=400&q=80',
+  'https://images.unsplash.com/photo-1509631179647-b8256206dbe8?auto=format&fit=crop&w=400&q=80',
+];
+
+export function InstagramConnect() {
+  return (
+    <section className="py-32 px-6 md:px-12 bg-summer-sand overflow-hidden">
+      <div className="max-w-7xl mx-auto">
+        <div className="flex flex-col md:flex-row justify-between items-end mb-12 reveal">
+          <div>
+            <h2 className="font-display text-4xl lg:text-5xl text-monstera mb-2">Conecte-se</h2>
+            <a
+              href="https://instagram.com/debora.blaso"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-walnut hover:underline flex items-center gap-2 font-bold tracking-wide"
+            >
+              <InstagramIcon className="w-4 h-4" /> @debora.blaso
+            </a>
+          </div>
+          <p className="text-muted max-w-md text-right hidden md:block">
+            Insights diários sobre comportamento, estilo e vida real.
+          </p>
+        </div>
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 reveal delay-200">
+          {images.map((src, index) => (
+            <div
+              key={index}
+              className="aspect-square bg-white rounded-xl overflow-hidden group relative cursor-pointer hover:shadow-xl transition-all"
+            >
+              <img
+                src={src}
+                alt={`Instagram post ${index + 1}`}
+                className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                loading="lazy"
+              />
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
