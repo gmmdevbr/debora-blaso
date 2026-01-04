@@ -6,6 +6,7 @@ import {
   Heart,
   Users,
 } from 'lucide-react';
+import aboutImage from '../assets/images/JFR_2139.webp';
 
 export function About() {
   const formations = [
@@ -112,10 +113,10 @@ export function About() {
             </div>
           </div>
         </div>
-        <div className="order-1 lg:order-2 relative w-full aspect-4/5 lg:h-200 reveal delay-200 lg:sticky lg:top-32">
+        <div className="order-1 lg:order-2 relative w-full aspect-square reveal delay-200 lg:sticky lg:top-24">
           <div className="absolute inset-0 bg-walnut/20 mask-organic -scale-x-100 -translate-x-6 -translate-y-6" />
           <img
-            src="https://images.unsplash.com/photo-1490481651871-ab68de25d43d?q=80&w=2070&auto=format&fit=crop"
+            src={aboutImage}
             alt="Débora Blaso Retrato"
             className="w-full h-full object-cover mask-organic -scale-x-100 relative z-10 shadow-2xl"
             loading="lazy"
