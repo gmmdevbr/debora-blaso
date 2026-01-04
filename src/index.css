@@ -1,22 +1,127 @@
-@import 'tailwindcss';
+@import "tailwindcss";
 
 /* Tailwind v4 Theme Configuration */
-@theme {
-  --font-display: 'Bodoni Moda', serif;
-  --font-sans: 'Roboto Condensed', sans-serif;
-  --font-script: 'Pinyon Script', cursive;
 
-  --color-monstera: #2e3628;
-  --color-summer-sand: #e6e4d9;
-  --color-walnut: #a27f67;
-  --color-ginkgo: #d1d4b0;
-  --color-muted: #505050;
-  --color-secondary: #506751;
+/* --- 1. REGISTRO DE FONTES LOCAIS --- */
+
+/* Títulos: Darline Serif */
+@font-face {
+  font-family: 'Darline Serif';
+  src: url('./assets/fonts/DarlineSerif-Regular.woff2') format('woff2'),
+       url('./assets/fonts/DarlineSerif-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Darline Serif';
+  src: url('./assets/fonts/DarlineSerif-Light.woff2') format('woff2'),
+       url('./assets/fonts/DarlineSerif-Light.ttf') format('truetype');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Darline Serif';
+  src: url('./assets/fonts/DarlineSerif-Bold.woff2') format('woff2'),
+       url('./assets/fonts/DarlineSerif-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Corpo: Gabriel Sans Condensed */
+@font-face {
+  font-family: 'Gabriel Sans Condensed';
+  src: url('./assets/fonts/Gabriel-Sans-Cond-Thin.otf') format('opentype');
+  font-weight: 100;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Gabriel Sans Condensed';
+  src: url('./assets/fonts/Gabriel-Sans-Cond-Light.otf') format('opentype');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Gabriel Sans Condensed';
+  src: url('./assets/fonts/Gabriel-Sans-Cond-Normal.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Gabriel Sans Condensed';
+  src: url('./assets/fonts/Gabriel-Sans-Cond-Medium.otf') format('opentype');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Gabriel Sans Condensed';
+  src: url('./assets/fonts/Gabriel-Sans-Cond-Bold.otf') format('opentype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Gabriel Sans Condensed';
+  src: url('./assets/fonts/Gabriel-Sans-Cond-Black.otf') format('opentype');
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Detalhes: Darline Script */
+@font-face {
+  font-family: 'Darline Script';
+  src: url('./assets/fonts/DarlineScript-Regular.woff2') format('woff2'),
+       url('./assets/fonts/DarlineScript-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Darline Script';
+  src: url('./assets/fonts/DarlineScript-Aged.woff2') format('woff2'),
+       url('./assets/fonts/DarlineScript-Aged.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* --- 2. CONFIGURAÇÃO DO TEMA TAILWIND V4 --- */
+@theme {
+  /* Fontes atualizadas para usar as locais primeiro */
+  --font-display: 'Darline Serif', 'Bodoni Moda', serif;
+  --font-sans: 'Gabriel Sans Condensed', 'Roboto Condensed', sans-serif;
+  --font-script: 'Darline Script', 'Pinyon Script', cursive;
+
+  /* Paleta de Cores Completa do Guidebook */
+  --color-monstera: #2E3628;      /* Primary */
+  --color-summer-sand: #E6E4D9;   /* Background */
+  --color-walnut: #A27F67;        /* Accent */
+  --color-ginkgo: #D1D4B0;        /* Highlight */
+  --color-lambs-ear: #506751;     /* Secondary */
+  --color-secondary: #506751;     /* Alias para compatibilidade */
+  --color-banyan: #28221E;        /* Dark Neutral */
+  --color-onix: #14110F;          /* Text Black */
+  --color-muted: #505050;         /* Muted Text */
 
   --animate-spin-slow: spin 12s linear infinite;
 }
 
-/* CSS Variables for Custom Utilities */
+/* --- 3. VARIÁVEIS E UTILITÁRIOS --- */
 :root {
   --background: hsl(48 20% 88%);
   --foreground: hsl(100 13% 18%);
