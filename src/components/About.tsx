@@ -1,13 +1,47 @@
-import { Award, Globe, GraduationCap } from 'lucide-react';
+import {
+  Award,
+  BookOpen,
+  Globe,
+  GraduationCap,
+  Heart,
+  Users,
+} from 'lucide-react';
 
 export function About() {
   const formations = [
-    { icon: GraduationCap, text: 'Psicologia - PUC Minas' },
-    { icon: Globe, text: 'Mestrado Psicologia da Saúde - Inglaterra' },
-    { icon: Award, text: 'Pós-Grad. Terapias Contextuais - Unifil' },
+    { icon: GraduationCap, text: 'Graduação em Psicologia – PUC Minas' },
+    {
+      icon: Award,
+      text: 'Pós-Graduação em Terapias Comportamentais Contextuais – Unifil',
+    },
+    {
+      icon: Globe,
+      text: 'Mestrado em Psicologia da Saúde – University of the West of England (Inglaterra)',
+    },
+    {
+      icon: BookOpen,
+      text: 'Aprimoramento em Distorção de Imagem Corporal - AMBULIM-IPq–HC-FMUSP',
+    },
+    {
+      icon: Heart,
+      text: 'Capacitação em Relacionamentos Abusivos – Instituto Não Era Amor',
+    },
+    {
+      icon: Users,
+      text: 'Formação em Coaching Psychology (Orientação Profissional) – Academia do Psicólogo',
+    },
   ];
 
-  const values = ['Beleza', 'Independência', 'Lealdade', 'Conexão'];
+  const values = [
+    'Beleza',
+    'Independência',
+    'Lealdade',
+    'Conexão',
+    'Segurança',
+    'Reciprocidade',
+    'Autocuidado',
+    'Responsabilidade',
+  ];
 
   return (
     <section
@@ -27,12 +61,17 @@ export function About() {
               Meu trabalho é voltado para mulheres que estão oficialmente
               cansadas de tentar dar conta de tudo — carreira, aparência,
               expectativas, relacionamentos e ainda parecerem "bem resolvidas".
+              Para quem quer entender processos, não rótulos; conseguir traduzir
+              o que sente; e construir uma vida que faça sentido ser vivida, não
+              apenas performada.
             </p>
             <p>
               Com <strong>12 anos de experiência</strong> como psicóloga,
               ofereço um atendimento psicológico baseado em evidências que
               enxerga você por inteiro: mente, corpo, identidade e
-              comportamento.
+              comportamento. Trabalho para substituir confusão por clareza,
+              culpa por compreensão, rigidez por flexibilidade e padrões
+              impossíveis por humanidade.
             </p>
           </div>
 
@@ -41,16 +80,16 @@ export function About() {
               <span className="text-[10px] uppercase tracking-[0.25em] font-bold text-walnut block mb-6 border-b border-monstera/10 pb-2">
                 Formações & Certificações
               </span>
-              <ul className="space-y-4">
+              <ul className="space-y-3">
                 {formations.map((item, index) => {
                   const Icon = item.icon;
                   return (
                     <li
                       key={index}
-                      className="flex items-center gap-4 text-monstera font-bold text-sm"
+                      className="flex items-start gap-3 text-monstera text-xs leading-relaxed"
                     >
-                      <Icon className="w-5 h-5 text-walnut shrink-0" />
-                      {item.text}
+                      <Icon className="w-4 h-4 text-walnut shrink-0 mt-0.5" />
+                      <span>{item.text}</span>
                     </li>
                   );
                 })}
@@ -73,7 +112,7 @@ export function About() {
             </div>
           </div>
         </div>
-        <div className="order-1 lg:order-2 relative w-full aspect-[4/5] lg:h-[800px] reveal delay-200 lg:sticky lg:top-32">
+        <div className="order-1 lg:order-2 relative w-full aspect-4/5 lg:h-200 reveal delay-200 lg:sticky lg:top-32">
           <div className="absolute inset-0 bg-walnut/20 mask-organic -scale-x-100 -translate-x-6 -translate-y-6" />
           <img
             src="https://images.unsplash.com/photo-1490481651871-ab68de25d43d?q=80&w=2070&auto=format&fit=crop"

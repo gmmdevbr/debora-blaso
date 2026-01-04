@@ -15,19 +15,12 @@ export function Hero() {
           </div>
 
           <h1 className="font-display text-6xl md:text-8xl lg:text-[6.5rem] leading-[0.9] tracking-tight mb-10 text-monstera">
-            PSICOLOGIA <br />
-            <span className="font-script font-normal text-5xl lg:text-7xl text-walnut block -mt-2 mb-2">
-              que veste,
-            </span>
-            MODA <br />
-            <span className="font-script font-normal text-5xl lg:text-7xl text-walnut block -mt-2">
-              que liberta.
-            </span>
+            Traduzindo complexidades em caminhos possíveis
           </h1>
 
           <p className="text-lg lg:text-xl max-w-lg text-muted mb-12 leading-relaxed pl-6 border-l-2 border-ginkgo">
-            Um mergulho na beleza que nasce de dentro. Traduzindo complexidades
-            em caminhos possíveis através da imagem.
+            Dê um passo em direção a uma vida com mais sentido, olhando para si
+            com presença e cuidado.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4">
@@ -47,7 +40,7 @@ export function Hero() {
             <img
               src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=1976&auto=format&fit=crop"
               alt="Débora Blaso Psicóloga"
-              className="w-full h-full object-cover mask-organic relative z-10 grayscale-[10%] group-hover:grayscale-0 transition-all duration-1000"
+              className="w-full h-full object-cover mask-organic relative z-10 grayscale-10 group-hover:grayscale-0 transition-all duration-1000"
               loading="eager"
             />
           </div>

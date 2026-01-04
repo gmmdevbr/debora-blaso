@@ -10,30 +10,34 @@ export function Abordagem() {
             Metodologia
           </span>
           <h2 className="font-display text-5xl lg:text-7xl mb-8 leading-none text-white">
-            Abordagem <br />
-            <span className="italic text-walnut font-script text-4xl lg:text-6xl">
-              Científica.
-            </span>
+            Minha Abordagem
           </h2>
+          <p className="opacity-80 leading-relaxed mb-2 text-white font-display italic text-2xl">
+            Base científica. Sensibilidade humana.
+          </p>
           <p className="text-lg opacity-80 leading-relaxed mb-10 text-white">
-            Utilizo a TCC (Terapia Cognitivo-Comportamental) integrada às
-            terapias contextuais contemporâneas. Estruturada, mas profundamente
-            humana.
+            Atuo com base na Psicologia Cognitivo-Comportamental (TCC), com
+            especialização em Terapias Contextuais. Minha prática integra a
+            Terapia Analítica Funcional (FAP) e a Terapia de Aceitação e
+            Compromisso (ACT) — abordagens contemporâneas que ajudam a entender
+            e transformar padrões de comportamento que causam sofrimento.
           </p>
         </div>
         <div className="grid grid-cols-1 gap-6">
           <div className="bg-white/5 border border-white/10 text-white p-8 rounded-[2.5rem]">
-            <h3 className="font-display text-3xl mb-2 text-ginkgo">FAP</h3>
+            <h3 className="font-display text-3xl mb-2 text-walnut">ACT</h3>
             <p className="text-sm opacity-70 font-sans">
-              Terapia Analítica Funcional: Foco nas relações interpessoais e
-              conexões autênticas.
+              A ACT é particularmente útil para dificuldades intrapessoais.
+              Como, por exemplo, lidar com emoções e pensamentos desagradáveis e
+              agir conforme seus valores pessoais.
             </p>
           </div>
           <div className="bg-white/5 border border-white/10 text-white p-8 rounded-[2.5rem]">
-            <h3 className="font-display text-3xl mb-2 text-walnut">ACT</h3>
+            <h3 className="font-display text-3xl mb-2 text-ginkgo">FAP</h3>
             <p className="text-sm opacity-70 font-sans">
-              Terapia de Aceitação e Compromisso: Lidar com emoções
-              desconfortáveis e agir conforme seus valores.
+              A FAP é particularmente útil para dificuldades interpessoais.
+              Como, por exemplo, dificuldades em estabelecer relações íntimas e
+              conexões autênticas.
             </p>
           </div>
         </div>

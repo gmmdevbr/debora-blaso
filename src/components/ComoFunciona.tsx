@@ -5,19 +5,19 @@ const steps = [
     number: '01',
     title: 'Escolha o Formato',
     description:
-      'Atendimento Online (Global) ou Presencial em Belo Horizonte/MG.',
+      'Os atendimentos têm duração de 50 minutos e podem ser realizados online, via Google Meet, ou presencialmente em Belo Horizonte/MG. Endereço Presencial: Rua dos Tupis, 38, sala 2103, Centro - BH. Em frente ao Parque Municipal e ao lado do antigo Othon Palace Hotel.',
   },
   {
     number: '02',
-    title: 'Agende sua Sessão',
+    title: 'Agende uma primeira sessão',
     description:
-      'Entre em contato pelo WhatsApp para verificar disponibilidade.',
+      'A primeira sessão tem como objetivo compreender sua demanda, esclarecer dúvidas e avaliar, juntos, se a psicoterapia é o caminho mais adequado para este momento da sua vida. Entre em contato pelo WhatsApp para verificar disponibilidade de agenda.',
   },
   {
     number: '03',
-    title: 'Seu Ritmo',
+    title: 'Encontramos o seu Ritmo',
     description:
-      'Definimos a frequência e o plano terapêutico ideal para sua necessidade.',
+      'Caso optemos por seguir com o processo, definiremos a frequência e construiremos um plano terapêutico personalizado, respeitando suas necessidades e objetivos.',
   },
 ];
 
