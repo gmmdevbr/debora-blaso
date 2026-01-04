@@ -31,11 +31,8 @@ export function Header() {
         )}
       >
         <div className="max-w-7xl mx-auto flex justify-between items-center">
-          <a href="#" className="flex flex-col group z-50">
-            <img src="/logo.svg" alt="Débora Blaso" className="h-8 w-auto" />
-            <span className="text-[9px] uppercase tracking-[0.25em] font-bold opacity-60 mt-1">
-              Psicologia Clínica e Imagem Corporal
-            </span>
+          <a href="#" className="group z-50">
+            <img src="/logo.svg" alt="Débora Blaso" className="h-7 w-auto" />
           </a>
 
           {/* Desktop Nav */}
