@@ -4,7 +4,9 @@ export function Agendar() {
   return (
     <section className="py-24 px-6 bg-ginkgo text-monstera text-center">
       <div className="max-w-4xl mx-auto reveal">
-        <h2 className="font-display text-4xl mb-8">Pronta para iniciar sua jornada?</h2>
+        <h2 className="font-display text-4xl mb-8">
+          Pronta para iniciar sua jornada?
+        </h2>
         <a
           href="https://wa.me/5500000000000"
           target="_blank"

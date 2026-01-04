@@ -1,14 +1,19 @@
-import { Sparkles, Mic, ExternalLink, ArrowRight } from 'lucide-react';
+import { ArrowRight, ExternalLink, Mic, Sparkles } from 'lucide-react';
 
 export function Services() {
   return (
-    <section id="servicos" className="py-32 px-6 md:px-12 bg-white scroll-mt-20">
+    <section
+      id="servicos"
+      className="py-32 px-6 md:px-12 bg-white scroll-mt-20"
+    >
       <div className="max-w-7xl mx-auto">
         <div className="mb-20 text-center reveal">
           <span className="text-[10px] uppercase tracking-[0.25em] font-bold text-walnut block mb-4">
             Expansão
           </span>
-          <h2 className="font-display text-5xl lg:text-7xl text-monstera">Além da clínica.</h2>
+          <h2 className="font-display text-5xl lg:text-7xl text-monstera">
+            Além da clínica.
+          </h2>
         </div>
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:h-150">
           {/* Clube */}

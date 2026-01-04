@@ -1,15 +1,15 @@
 import { useEffect } from 'react';
-import { Header } from './components/Header';
-import { Hero } from './components/Hero';
-import { About } from './components/About';
-import { Motivos } from './components/Motivos';
-import { ComoFunciona } from './components/ComoFunciona';
 import { Abordagem } from './components/Abordagem';
+import { About } from './components/About';
 import { Agendar } from './components/Agendar';
-import { Services } from './components/Services';
-import { InstagramConnect } from './components/Instagram';
+import { ComoFunciona } from './components/ComoFunciona';
 import { Contact } from './components/Contact';
 import { Footer } from './components/Footer';
+import { Header } from './components/Header';
+import { Hero } from './components/Hero';
+import { InstagramConnect } from './components/Instagram';
+import { Motivos } from './components/Motivos';
+import { Services } from './components/Services';
 import { useScrollReveal } from './hooks/useScrollReveal';
 
 function App() {

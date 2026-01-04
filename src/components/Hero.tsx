@@ -1,4 +1,4 @@
-import { ArrowRight, ArrowDown } from 'lucide-react';
+import { ArrowDown, ArrowRight } from 'lucide-react';
 
 export function Hero() {
   return (
@@ -26,8 +26,8 @@ export function Hero() {
           </h1>
 
           <p className="text-lg lg:text-xl max-w-lg text-muted mb-12 leading-relaxed pl-6 border-l-2 border-ginkgo">
-            Um mergulho na beleza que nasce de dentro. Traduzindo complexidades em caminhos
-            possíveis através da imagem.
+            Um mergulho na beleza que nasce de dentro. Traduzindo complexidades
+            em caminhos possíveis através da imagem.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4">

@@ -13,7 +13,9 @@ export function InstagramConnect() {
       <div className="max-w-7xl mx-auto">
         <div className="flex flex-col md:flex-row justify-between items-end mb-12 reveal">
           <div>
-            <h2 className="font-display text-4xl lg:text-5xl text-monstera mb-2">Conecte-se</h2>
+            <h2 className="font-display text-4xl lg:text-5xl text-monstera mb-2">
+              Conecte-se
+            </h2>
             <a
               href="https://instagram.com/debora.blaso"
               target="_blank"

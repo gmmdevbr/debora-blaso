@@ -1,7 +1,7 @@
-import { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
-import { cn } from '../lib/utils';
+import { useEffect, useState } from 'react';
 import { useNavbarScroll } from '../hooks/useNavbarScroll';
+import { cn } from '../lib/utils';
 
 export function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -78,11 +78,16 @@ export function Header() {
 
           {/* Mobile Toggle */}
           <button
+            type="button"
             onClick={toggleMenu}
             className="lg:hidden z-50 text-monstera p-2"
             aria-label="Toggle menu"
           >
-            {isMenuOpen ? <X className="w-8 h-8" /> : <Menu className="w-8 h-8" />}
+            {isMenuOpen ? (
+              <X className="w-8 h-8" />
+            ) : (
+              <Menu className="w-8 h-8" />
+            )}
           </button>
         </div>
       </header>
@@ -95,10 +100,18 @@ export function Header() {
         )}
       >
         <nav className="flex flex-col gap-8 text-center text-3xl font-display text-monstera">
-          <a href="#sobre" className="hover:text-walnut mobile-link" onClick={closeMenu}>
+          <a
+            href="#sobre"
+            className="hover:text-walnut mobile-link"
+            onClick={closeMenu}
+          >
             Sobre
           </a>
-          <a href="#motivos" className="hover:text-walnut mobile-link" onClick={closeMenu}>
+          <a
+            href="#motivos"
+            className="hover:text-walnut mobile-link"
+            onClick={closeMenu}
+          >
             Motivos
           </a>
           <a
@@ -108,7 +121,11 @@ export function Header() {
           >
             Como Funciona
           </a>
-          <a href="#servicos" className="hover:text-walnut mobile-link" onClick={closeMenu}>
+          <a
+            href="#servicos"
+            className="hover:text-walnut mobile-link"
+            onClick={closeMenu}
+          >
             O Clube
           </a>
           <a

@@ -1,4 +1,4 @@
-import { GraduationCap, Globe, Award } from 'lucide-react';
+import { Award, Globe, GraduationCap } from 'lucide-react';
 
 export function About() {
   const formations = [
@@ -24,14 +24,15 @@ export function About() {
           </h2>
           <div className="space-y-6 text-lg text-muted leading-relaxed text-justify lg:text-left font-sans">
             <p>
-              Meu trabalho é voltado para mulheres que estão oficialmente cansadas de tentar dar
-              conta de tudo — carreira, aparência, expectativas, relacionamentos e ainda parecerem
-              "bem resolvidas".
+              Meu trabalho é voltado para mulheres que estão oficialmente
+              cansadas de tentar dar conta de tudo — carreira, aparência,
+              expectativas, relacionamentos e ainda parecerem "bem resolvidas".
             </p>
             <p>
-              Com <strong>12 anos de experiência</strong> como psicóloga, ofereço um atendimento
-              psicológico baseado em evidências que enxerga você por inteiro: mente, corpo,
-              identidade e comportamento.
+              Com <strong>12 anos de experiência</strong> como psicóloga,
+              ofereço um atendimento psicológico baseado em evidências que
+              enxerga você por inteiro: mente, corpo, identidade e
+              comportamento.
             </p>
           </div>
 
@@ -44,7 +45,10 @@ export function About() {
                 {formations.map((item, index) => {
                   const Icon = item.icon;
                   return (
-                    <li key={index} className="flex items-center gap-4 text-monstera font-bold text-sm">
+                    <li
+                      key={index}
+                      className="flex items-center gap-4 text-monstera font-bold text-sm"
+                    >
                       <Icon className="w-5 h-5 text-walnut shrink-0" />
                       {item.text}
                     </li>
@@ -60,7 +64,9 @@ export function About() {
                 {values.map((value, index) => (
                   <div key={index} className="flex items-center gap-2">
                     <div className="w-1.5 h-1.5 rounded-full bg-walnut" />
-                    <span className="text-sm font-bold text-monstera">{value}</span>
+                    <span className="text-sm font-bold text-monstera">
+                      {value}
+                    </span>
                   </div>
                 ))}
               </div>

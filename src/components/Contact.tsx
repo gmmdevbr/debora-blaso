@@ -4,10 +4,12 @@ export function Contact() {
   return (
     <section className="py-32 px-6 md:px-12 bg-white border-t border-monstera/5">
       <div className="max-w-3xl mx-auto text-center reveal">
-        <h2 className="font-display text-5xl lg:text-6xl text-monstera mb-6">Fale Comigo</h2>
+        <h2 className="font-display text-5xl lg:text-6xl text-monstera mb-6">
+          Fale Comigo
+        </h2>
         <p className="text-lg text-muted mb-10 leading-relaxed">
-          Dúvidas sobre como a terapia funciona ou se este é o momento certo? Estou aqui para
-          esclarecer.
+          Dúvidas sobre como a terapia funciona ou se este é o momento certo?
+          Estou aqui para esclarecer.
         </p>
         <a
           href="https://wa.me/5500000000000"
