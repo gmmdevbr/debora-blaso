@@ -114,11 +114,11 @@ function FlipCard({ card }: { card: CardData }) {
             <Plus className="w-4 h-4" />
           </div>
         </div>
-        <div className="flip-card-back bg-lambs-ear text-white p-10 flex flex-col justify-start">
+        <div className="flip-card-back bg-monstera text-summer-sand p-10 flex flex-col justify-start">
           <ul className="space-y-3">
             {card.backText.split('. ').filter(text => text.trim()).map((point, idx) => (
               <li key={idx} className="flex gap-3 items-start">
-                <span className="text-ginkgo mt-1 shrink-0">•</span>
+                <span className="text-walnut mt-1 shrink-0">•</span>
                 <span className="text-sm leading-relaxed font-sans text-left">
                   {point.trim()}{point.endsWith('.') ? '' : '.'}
                 </span>
@@ -135,18 +135,18 @@ export function Motivos() {
   return (
     <section
       id="motivos"
-      className="py-32 px-6 md:px-12 bg-monstera text-summer-sand scroll-mt-20"
+      className="py-32 px-6 md:px-12 bg-summer-sand scroll-mt-20"
     >
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-20 reveal">
-          <h2 className="font-display text-4xl lg:text-6xl tracking-tighter mb-6 leading-tight">
+          <h2 className="font-display text-4xl lg:text-6xl tracking-tighter mb-6 leading-tight text-monstera">
             Cada pessoa tem um motivo <br />
             para fazer terapia.{' '}
-            <span className="text-ginkgo italic font-script">
+            <span className="text-walnut italic font-script">
               Qual é o seu?
             </span>
           </h2>
-          <p className="text-[10px] uppercase tracking-[0.25em] font-bold opacity-60">
+          <p className="text-[10px] uppercase tracking-[0.25em] font-bold opacity-60 text-monstera">
             Toque nos cards para revelar
           </p>
         </div>

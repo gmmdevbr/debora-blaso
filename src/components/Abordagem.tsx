@@ -2,20 +2,20 @@ export function Abordagem() {
   return (
     <section
       id="abordagem"
-      className="py-32 px-6 md:px-12 bg-monstera text-ginkgo scroll-mt-20"
+      className="py-32 px-6 md:px-12 bg-summer-sand scroll-mt-20"
     >
       <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
         <div className="reveal">
-          <span className="text-[10px] uppercase tracking-[0.25em] font-bold text-ginkgo block mb-6 opacity-60">
+          <span className="text-[10px] uppercase tracking-[0.25em] font-bold text-walnut block mb-6 opacity-70">
             Metodologia
           </span>
-          <h2 className="font-display text-5xl lg:text-7xl mb-8 leading-none text-white">
+          <h2 className="font-display text-5xl lg:text-7xl mb-8 leading-none text-monstera">
             Minha Abordagem
           </h2>
-          <p className="opacity-80 leading-relaxed mb-2 text-white font-display italic text-2xl">
+          <p className="opacity-80 leading-relaxed mb-2 text-monstera font-display italic text-2xl">
             Base científica. Sensibilidade humana.
           </p>
-          <p className="text-lg opacity-80 leading-relaxed mb-10 text-white">
+          <p className="text-lg opacity-80 leading-relaxed mb-10 text-monstera">
             Atuo com base na Psicologia Cognitivo-Comportamental (TCC), com
             especialização em Terapias Contextuais. Minha prática integra a
             Terapia Analítica Funcional (FAP) e a Terapia de Aceitação e
@@ -24,17 +24,17 @@ export function Abordagem() {
           </p>
         </div>
         <div className="grid grid-cols-1 gap-6">
-          <div className="bg-white/5 border border-white/10 text-white p-8 rounded-[2.5rem]">
-            <h3 className="font-display text-3xl mb-2 text-walnut">ACT</h3>
-            <p className="text-sm opacity-70 font-sans">
+          <div className="bg-lambs-ear/10 border-2 border-lambs-ear/30 text-monstera p-8 rounded-[2.5rem] hover:bg-lambs-ear/20 hover:border-lambs-ear/50 transition-all duration-300">
+            <h3 className="font-display text-3xl mb-2 text-lambs-ear">ACT</h3>
+            <p className="text-sm opacity-80 font-sans leading-relaxed">
               A ACT é particularmente útil para dificuldades intrapessoais.
               Como, por exemplo, lidar com emoções e pensamentos desagradáveis e
               agir conforme seus valores pessoais.
             </p>
           </div>
-          <div className="bg-white/5 border border-white/10 text-white p-8 rounded-[2.5rem]">
-            <h3 className="font-display text-3xl mb-2 text-ginkgo">FAP</h3>
-            <p className="text-sm opacity-70 font-sans">
+          <div className="bg-walnut/10 border-2 border-walnut/30 text-monstera p-8 rounded-[2.5rem] hover:bg-walnut/20 hover:border-walnut/50 transition-all duration-300">
+            <h3 className="font-display text-3xl mb-2 text-walnut">FAP</h3>
+            <p className="text-sm opacity-80 font-sans leading-relaxed">
               A FAP é particularmente útil para dificuldades interpessoais.
               Como, por exemplo, dificuldades em estabelecer relações íntimas e
               conexões autênticas.

@@ -4,7 +4,7 @@ export function Services() {
   return (
     <section
       id="servicos"
-      className="py-32 px-6 md:px-12 bg-white scroll-mt-20"
+      className="py-32 px-6 md:px-12 bg-summer-sand scroll-mt-20"
     >
       <div className="max-w-7xl mx-auto">
         <div className="mb-20 text-center reveal">
@@ -35,14 +35,14 @@ export function Services() {
                 href="https://psicologiadamoda.club"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 bg-ginkgo text-monstera px-8 py-3 rounded-sm text-[10px] font-bold uppercase tracking-widest hover:bg-white transition-all"
+                className="inline-flex items-center gap-2 bg-lambs-ear text-summer-sand px-8 py-3 rounded-sm text-[10px] font-bold uppercase tracking-widest hover:bg-monstera hover:text-ginkgo transition-all"
               >
                 Conhecer o Clube <ExternalLink className="w-4 h-4" />
               </a>
             </div>
           </div>
           {/* Palestras */}
-          <div className="relative group overflow-hidden rounded-[3rem] h-125 lg:h-full reveal shadow-2xl cursor-pointer bg-walnut/5 border border-walnut/20">
+          <div className="relative group overflow-hidden rounded-[3rem] h-125 lg:h-full reveal shadow-2xl cursor-pointer bg-lambs-ear/10 border-2 border-lambs-ear/30 hover:border-lambs-ear/50 transition-all duration-300">
             <div className="relative z-20 p-12 h-full flex flex-col justify-center items-center text-center text-monstera">
               <Mic className="w-12 h-12 text-walnut mb-6" />
               <h3 className="font-display text-5xl lg:text-6xl mb-6">

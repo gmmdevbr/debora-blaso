@@ -40,7 +40,7 @@ export function ComoFunciona() {
           {steps.map((step, index) => (
             <div
               key={index}
-              className="p-10 border border-monstera/10 hover:border-walnut/50 transition-colors reveal bg-white rounded-[2.5rem]"
+              className="p-10 border-2 border-monstera/15 hover:border-walnut/40 hover:bg-walnut/5 transition-all duration-300 reveal bg-summer-sand/80 rounded-[2.5rem] shadow-sm"
             >
               <span className="font-display text-6xl text-walnut/20 mb-6 block">
                 {step.number}
@@ -52,9 +52,9 @@ export function ComoFunciona() {
             </div>
           ))}
         </div>
-        <div className="mt-16 p-6 bg-walnut/10 rounded-2xl border border-walnut/20 flex gap-4 items-start max-w-2xl mx-auto reveal">
-          <div className="bg-walnut p-2 rounded-full shrink-0">
-            <CheckCircle className="w-4 h-4 text-white" />
+        <div className="mt-16 p-6 bg-lambs-ear/10 rounded-2xl border-2 border-lambs-ear/20 flex gap-4 items-start max-w-2xl mx-auto reveal">
+          <div className="bg-lambs-ear p-2 rounded-full shrink-0">
+            <CheckCircle className="w-4 h-4 text-summer-sand" />
           </div>
           <div>
             <h4 className="font-bold text-monstera text-sm uppercase tracking-wide mb-1">

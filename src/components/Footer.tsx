@@ -1,14 +1,14 @@
 export function Footer() {
   return (
-    <footer className="bg-monstera text-white py-16 px-6 md:px-12">
+    <footer className="bg-summer-sand text-monstera py-16 px-6 md:px-12 border-t-2 border-monstera/10">
       <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-8 text-center md:text-left">
         <div>
-          <img src="/logo.svg" alt="Débora Blaso" className="h-8 w-auto mb-3 mx-auto md:mx-0 brightness-0 invert" />
+          <img src="/logo.svg" alt="Débora Blaso" className="h-8 w-auto mb-3 mx-auto md:mx-0" />
           <span className="text-[10px] uppercase tracking-[0.2em] opacity-60 block mt-2">
             CRP 12/XXXXX • Psicologia & Imagem
           </span>
         </div>
-        <div className="flex gap-8 text-[11px] font-bold uppercase tracking-[0.2em] opacity-80">
+        <div className="flex gap-8 text-[11px] font-bold uppercase tracking-[0.2em] opacity-70">
           <a href="#sobre" className="hover:text-walnut transition-colors">
             Sobre
           </a>

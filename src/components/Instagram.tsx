@@ -33,7 +33,7 @@ export function InstagramConnect() {
           {images.map((src, index) => (
             <div
               key={index}
-              className="aspect-square bg-white rounded-xl overflow-hidden group relative cursor-pointer hover:shadow-xl transition-all"
+              className="aspect-square bg-summer-sand/50 rounded-xl overflow-hidden group relative cursor-pointer hover:shadow-2xl border border-monstera/10 hover:border-walnut/30 transition-all duration-300"
             >
               <img
                 src={src}

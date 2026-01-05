@@ -47,7 +47,7 @@ export function About() {
   return (
     <section
       id="sobre"
-      className="py-32 px-6 md:px-12 bg-white/40 backdrop-blur-sm scroll-mt-20"
+      className="py-32 px-6 md:px-12 bg-summer-sand scroll-mt-20"
     >
       <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-24 items-start">
         <div className="order-2 lg:order-1 reveal">

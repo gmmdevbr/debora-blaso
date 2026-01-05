@@ -2,7 +2,7 @@ import { ArrowUpRight } from 'lucide-react';
 
 export function Contact() {
   return (
-    <section className="py-32 px-6 md:px-12 bg-white border-t border-monstera/5">
+    <section className="py-32 px-6 md:px-12 bg-summer-sand border-t-2 border-monstera/10">
       <div className="max-w-3xl mx-auto text-center reveal">
         <h2 className="font-display text-5xl lg:text-6xl text-monstera mb-6">
           Fale Comigo
