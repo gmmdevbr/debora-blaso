@@ -13,8 +13,8 @@ export function Hero() {
       {/* Subtle decorative blob */}
       <div className="absolute top-0 right-0 w-[40vw] h-[40vw] bg-ginkgo/10 rounded-full blur-[120px] -z-10 translate-x-1/4 -translate-y-1/4 hidden lg:block" />
 
-      <div className="max-w-7xl mx-auto w-full px-6 md:px-12 pt-16 pb-20 lg:pt-24 relative z-10">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 items-center">
+      <div className="max-w-7xl mx-auto w-full px-6 md:px-12 py-24 lg:py-32 relative z-10">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 items-start">
           {/* Content - Left side on desktop, centered on mobile */}
           <div className="lg:col-span-7 reveal">
             <div className="flex items-center gap-3 mb-8">

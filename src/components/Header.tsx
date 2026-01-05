@@ -31,7 +31,7 @@ export function Header() {
         )}
       >
         <div className="max-w-7xl mx-auto flex justify-between items-center">
-          <a href="#" className="group z-50">
+          <a href="#" className="group z-50 flex items-center">
             <img src="/logo.svg" alt="Débora Blaso" className="h-7 w-auto" />
           </a>
 

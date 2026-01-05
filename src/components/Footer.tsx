@@ -3,9 +3,7 @@ export function Footer() {
     <footer className="bg-monstera text-white py-16 px-6 md:px-12">
       <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-8 text-center md:text-left">
         <div>
-          <span className="font-display text-2xl font-bold tracking-tight block">
-            DÉBORA BLASO
-          </span>
+          <img src="/logo.svg" alt="Débora Blaso" className="h-8 w-auto mb-3 mx-auto md:mx-0 brightness-0 invert" />
           <span className="text-[10px] uppercase tracking-[0.2em] opacity-60 block mt-2">
             CRP 12/XXXXX • Psicologia & Imagem
           </span>
@@ -26,8 +24,9 @@ export function Footer() {
             Instagram
           </a>
         </div>
-        <div className="text-[10px] uppercase tracking-[0.2em] opacity-40">
-          © 2025 Todos os direitos reservados.
+        <div className="text-[10px] uppercase tracking-[0.2em] opacity-40 flex flex-col gap-2">
+          <span>© 2025 Todos os direitos reservados.</span>
+          <span className="opacity-60">Feito por: <a href="https://gmartins.dev" target="_blank" rel="noopener noreferrer" className="hover:text-walnut transition-colors">gmartins.dev</a></span>
         </div>
       </div>
     </footer>

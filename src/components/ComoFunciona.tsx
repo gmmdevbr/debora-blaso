@@ -61,8 +61,7 @@ export function ComoFunciona() {
               Nota sobre Convênios
             </h4>
             <p className="text-sm text-monstera/80 leading-relaxed">
-              Atendimentos particulares. Não aceitamos convênios diretamente,
-              mas fornecemos recibo para solicitação de reembolso.
+              Meus atendimentos são somente particulares, mas emito nota fiscal que pode ser utilizada para solicitação de reembolso, caso seu convênio realize. Se tiver dúvidas de como funciona o processo de reembolso, basta entrar em contato com a sua operadora de plano de saúde.
             </p>
           </div>
         </div>
