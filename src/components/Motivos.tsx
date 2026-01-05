@@ -96,7 +96,7 @@ function FlipCard({ card }: { card: CardData }) {
           <div className="w-12 h-12 sm:w-14 sm:h-14 bg-lambs-ear rounded-full flex items-center justify-center">
             <Icon className="w-5 h-5 sm:w-6 sm:h-6 text-summer-sand" />
           </div>
-          <h3 className="font-display text-2xl sm:text-3xl leading-tight flex-grow sm:flex-grow-0 flex items-center justify-center sm:justify-start sm:items-start pt-4">
+          <h3 className="font-display text-2xl sm:text-3xl leading-tight flex-grow sm:flex-grow-0 flex items-center justify-center sm:justify-start sm:items-start sm:pt-4">
             {card.title.split('&').map((part, i, arr) =>
               i < arr.length - 1 ? (
                 <span key={part}>
