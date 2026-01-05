@@ -92,9 +92,9 @@ function FlipCard({ card }: { card: CardData }) {
       aria-label={`Card: ${card.title} - Click to flip`}
     >
       <div className="flip-card-inner">
-        <div className="flip-card-front bg-white text-monstera border border-white/10 p-10 flex flex-col justify-between shadow-lg">
-          <div className="w-14 h-14 bg-summer-sand rounded-full flex items-center justify-center mb-4">
-            <Icon className="w-6 h-6 text-walnut" />
+        <div className="flip-card-front bg-summer-sand text-monstera border border-monstera/10 p-10 flex flex-col justify-between shadow-lg">
+          <div className="w-14 h-14 bg-lambs-ear rounded-full flex items-center justify-center mb-4">
+            <Icon className="w-6 h-6 text-summer-sand" />
           </div>
           <h3 className="font-display text-3xl leading-tight">
             {card.title.split('&').map((part, i, arr) =>
@@ -114,10 +114,17 @@ function FlipCard({ card }: { card: CardData }) {
             <Plus className="w-4 h-4" />
           </div>
         </div>
-        <div className="flip-card-back bg-walnut text-white p-10 flex flex-col justify-center">
-          <p className="text-sm leading-relaxed font-sans text-left">
-            {card.backText}
-          </p>
+        <div className="flip-card-back bg-lambs-ear text-white p-10 flex flex-col justify-start">
+          <ul className="space-y-3">
+            {card.backText.split('. ').filter(text => text.trim()).map((point, idx) => (
+              <li key={idx} className="flex gap-3 items-start">
+                <span className="text-ginkgo mt-1 shrink-0">•</span>
+                <span className="text-sm leading-relaxed font-sans text-left">
+                  {point.trim()}{point.endsWith('.') ? '' : '.'}
+                </span>
+              </li>
+            ))}
+          </ul>
         </div>
       </div>
     </div>
