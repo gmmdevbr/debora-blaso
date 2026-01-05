@@ -9,6 +9,7 @@ import { Header } from './components/Header';
 import { Hero } from './components/Hero';
 import { InstagramConnect } from './components/Instagram';
 import { Motivos } from './components/Motivos';
+import { Reviews } from './components/Reviews';
 import { Services } from './components/Services';
 import { useScrollReveal } from './hooks/useScrollReveal';
 
@@ -34,6 +35,7 @@ function App() {
         <Motivos />
         <ComoFunciona />
         <Abordagem />
+        <Reviews />
         <Agendar />
         <Services />
         <InstagramConnect />

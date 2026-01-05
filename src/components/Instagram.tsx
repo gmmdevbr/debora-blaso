@@ -1,10 +1,10 @@
 import { Instagram as InstagramIcon } from 'lucide-react';
 
 const images = [
-  'https://images.unsplash.com/photo-1550614000-4b9519e007d9?auto=format&fit=crop&w=400&q=80',
+  'https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&fit=crop&w=400&q=80',
   'https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&w=400&q=80',
   'https://images.unsplash.com/photo-1496747611176-843222e1e57c?auto=format&fit=crop&w=400&q=80',
-  'https://images.unsplash.com/photo-1509631179647-b8256206dbe8?auto=format&fit=crop&w=400&q=80',
+  'https://images.unsplash.com/photo-1490481651871-ab68de25d43d?auto=format&fit=crop&w=400&q=80',
 ];
 
 export function InstagramConnect() {

@@ -8,9 +8,6 @@ export function Services() {
     >
       <div className="max-w-7xl mx-auto">
         <div className="mb-20 text-center reveal">
-          <span className="text-[10px] uppercase tracking-[0.25em] font-bold text-walnut block mb-4">
-            Expansão
-          </span>
           <h2 className="font-display text-5xl lg:text-7xl text-monstera">
             Além da clínica.
           </h2>
@@ -18,10 +15,10 @@ export function Services() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:h-150">
           {/* Clube */}
           <div className="relative group overflow-hidden rounded-[3rem] h-125 lg:h-full reveal shadow-2xl cursor-pointer">
-            <div className="absolute inset-0 bg-monstera/90 z-10 transition-colors group-hover:bg-monstera/95" />
+            <div className="absolute inset-0 bg-monstera/70 z-10 transition-colors group-hover:bg-monstera/80" />
             <img
               src="https://images.unsplash.com/photo-1567401893414-76b7b1e5a7a5?q=80&w=2070&auto=format&fit=crop"
-              className="absolute inset-0 w-full h-full object-cover grayscale opacity-40 group-hover:scale-105 transition-transform duration-1000"
+              className="absolute inset-0 w-full h-full object-cover grayscale opacity-60 group-hover:scale-105 transition-transform duration-1000"
               alt="Clube de Psicologia da Moda"
               loading="lazy"
             />
@@ -42,7 +39,14 @@ export function Services() {
             </div>
           </div>
           {/* Palestras */}
-          <div className="relative group overflow-hidden rounded-[3rem] h-125 lg:h-full reveal shadow-2xl cursor-pointer bg-lambs-ear/10 border-2 border-lambs-ear/30 hover:border-lambs-ear/50 transition-all duration-300">
+          <div className="relative group overflow-hidden rounded-[3rem] h-125 lg:h-full reveal shadow-2xl cursor-pointer border-2 border-lambs-ear/30 hover:border-lambs-ear/50 transition-all duration-300">
+            <div className="absolute inset-0 bg-lambs-ear/20 z-10 transition-colors group-hover:bg-lambs-ear/30" />
+            <img
+              src="https://images.unsplash.com/photo-1757141975544-2fac7a703425?q=80&w=2070&auto=format&fit=crop"
+              className="absolute inset-0 w-full h-full object-cover opacity-50 group-hover:scale-105 transition-transform duration-1000"
+              alt="Palestras e Talks"
+              loading="lazy"
+            />
             <div className="relative z-20 p-12 h-full flex flex-col justify-center items-center text-center text-monstera">
               <Mic className="w-12 h-12 text-walnut mb-6" />
               <h3 className="font-display text-5xl lg:text-6xl mb-6">
