@@ -99,28 +99,29 @@ export function Header() {
             href="#sobre"
             onClick={closeMenu}
             className="hover:text-walnut transition-colors"
-            onClick={closeMenu}
           >
             Sobre
           </a>
           <a
             href="#motivos"
-            className="hover:text-walnut mobile-link"
             onClick={closeMenu}
+            className="hover:text-walnut transition-colors"
           >
             Motivos
           </a>
           <a
             href="#como-funciona"
-            className="hover:text-walnut mobile-link"
+            onClick={closeMenu}
+            className="hover:text-walnut transition-colors"
+          >
             onClick={closeMenu}
           >
             Como Funciona
           </a>
           <a
             href="#servicos"
-            className="hover:text-walnut mobile-link"
             onClick={closeMenu}
+            className="hover:text-walnut transition-colors"
           >
             O Clube
           </a>
@@ -128,6 +129,7 @@ export function Header() {
             href="https://wa.me/5500000000000"
             target="_blank"
             rel="noopener noreferrer"
+            onClick={closeMenu}
             className="text-sm font-sans uppercase tracking-widest bg-monstera text-ginkgo px-10 py-4 mt-4 shadow-xl"
           >
             Agendar WhatsApp
