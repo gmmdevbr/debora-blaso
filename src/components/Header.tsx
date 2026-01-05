@@ -114,8 +114,6 @@ export function Header() {
             onClick={closeMenu}
             className="hover:text-walnut transition-colors"
           >
-            onClick={closeMenu}
-          >
             Como Funciona
           </a>
           <a
