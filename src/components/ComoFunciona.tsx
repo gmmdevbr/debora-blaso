@@ -28,31 +28,31 @@ export function ComoFunciona() {
       className="py-32 px-6 md:px-12 bg-summer-sand scroll-mt-20"
     >
       <div className="max-w-7xl mx-auto">
-        <div className="mb-20 reveal">
+        <div className="mb-16 sm:mb-20 reveal">
           <span className="text-[10px] uppercase tracking-[0.25em] font-bold text-walnut block mb-4">
             Passo a Passo
           </span>
-          <h2 className="font-display text-5xl lg:text-7xl text-monstera">
+          <h2 className="font-display text-4xl sm:text-5xl lg:text-7xl text-monstera">
             Como funciona?
           </h2>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8">
           {steps.map((step, index) => (
             <div
               key={index}
-              className="p-10 border-2 border-monstera/15 hover:border-walnut/40 hover:bg-walnut/5 transition-all duration-300 reveal bg-summer-sand/80 rounded-[2.5rem] shadow-sm"
+              className="p-6 sm:p-8 lg:p-10 border-2 border-monstera/15 hover:border-walnut/40 hover:bg-walnut/5 transition-all duration-300 reveal bg-summer-sand/80 rounded-[2rem] sm:rounded-[2.5rem] shadow-sm"
             >
-              <span className="font-display text-6xl text-walnut/20 mb-6 block">
+              <span className="font-display text-5xl sm:text-6xl text-walnut/20 mb-4 sm:mb-6 block">
                 {step.number}
               </span>
-              <h3 className="font-display text-2xl text-monstera mb-4">
+              <h3 className="font-display text-xl sm:text-2xl text-monstera mb-3 sm:mb-4">
                 {step.title}
               </h3>
               <p className="text-muted leading-relaxed">{step.description}</p>
             </div>
           ))}
         </div>
-        <div className="mt-16 p-6 bg-lambs-ear/10 rounded-2xl border-2 border-lambs-ear/20 flex gap-4 items-start max-w-2xl mx-auto reveal">
+        <div className="mt-12 sm:mt-16 p-5 sm:p-6 bg-lambs-ear/10 rounded-xl sm:rounded-2xl border-2 border-lambs-ear/20 flex gap-3 sm:gap-4 items-start max-w-2xl mx-auto reveal">
           <div className="bg-lambs-ear p-2 rounded-full shrink-0">
             <CheckCircle className="w-4 h-4 text-summer-sand" />
           </div>

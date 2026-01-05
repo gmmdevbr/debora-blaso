@@ -92,11 +92,11 @@ function FlipCard({ card }: { card: CardData }) {
       aria-label={`Card: ${card.title} - Click to flip`}
     >
       <div className="flip-card-inner">
-        <div className="flip-card-front bg-summer-sand text-monstera border border-monstera/10 p-10 flex flex-col justify-between shadow-lg min-h-100">
-          <div className="w-14 h-14 bg-lambs-ear rounded-full flex items-center justify-center mb-4">
-            <Icon className="w-6 h-6 text-summer-sand" />
+        <div className="flip-card-front bg-summer-sand text-monstera border border-monstera/10 p-6 sm:p-8 lg:p-10 flex flex-col justify-center items-center shadow-lg min-h-100 text-center sm:text-left sm:items-start sm:justify-between gap-4 sm:gap-0">
+          <div className="w-12 h-12 sm:w-14 sm:h-14 bg-lambs-ear rounded-full flex items-center justify-center">
+            <Icon className="w-5 h-5 sm:w-6 sm:h-6 text-summer-sand" />
           </div>
-          <h3 className="font-display text-3xl leading-tight">
+          <h3 className="font-display text-2xl sm:text-3xl leading-tight flex-grow sm:flex-grow-0 flex items-center justify-center sm:justify-start sm:items-start pt-4">
             {card.title.split('&').map((part, i, arr) =>
               i < arr.length - 1 ? (
                 <span key={part}>
@@ -107,7 +107,7 @@ function FlipCard({ card }: { card: CardData }) {
               )
             )}
           </h3>
-          <div className="mt-auto pt-8 border-t border-monstera/10 w-full flex justify-between items-center opacity-50">
+          <div className="pt-6 sm:pt-8 border-t border-monstera/10 w-full flex justify-center sm:justify-between items-center opacity-50 gap-2 sm:mt-auto">
             <span className="text-[10px] uppercase tracking-[0.25em] font-bold">
               Ver Detalhes
             </span>
@@ -138,9 +138,9 @@ export function Motivos() {
       className="py-32 px-6 md:px-12 bg-summer-sand scroll-mt-20"
     >
       <div className="max-w-7xl mx-auto">
-        <div className="text-center mb-20 reveal">
-          <h2 className="font-display text-4xl lg:text-6xl tracking-tighter mb-6 leading-tight text-monstera">
-            Cada pessoa tem um motivo <br />
+        <div className="text-center mb-16 sm:mb-20 reveal">
+          <h2 className="font-display text-3xl sm:text-4xl lg:text-6xl tracking-tighter mb-6 leading-tight text-monstera">
+            Cada pessoa tem um motivo <br className="hidden sm:block" />
             para fazer terapia.{' '}
             <span className="text-walnut italic font-script">
               Qual é o seu?

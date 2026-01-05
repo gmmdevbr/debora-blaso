@@ -97,7 +97,8 @@ export function Header() {
         <nav className="flex flex-col gap-8 text-center text-3xl font-display text-monstera">
           <a
             href="#sobre"
-            className="hover:text-walnut mobile-link"
+            onClick={closeMenu}
+            className="hover:text-walnut transition-colors"
             onClick={closeMenu}
           >
             Sobre

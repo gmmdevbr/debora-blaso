@@ -16,7 +16,7 @@ export function Hero() {
       <div className="max-w-7xl mx-auto w-full px-6 md:px-12 py-24 lg:py-32 relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 items-start">
           {/* Content - Left side on desktop, centered on mobile */}
-          <div className="lg:col-span-7 reveal">
+          <div className="order-2 lg:order-1 lg:col-span-7 reveal">
             <div className="flex items-center gap-3 mb-8">
               <span className="w-12 h-px bg-ginkgo" />
               <span className="text-[10px] uppercase tracking-[0.25em] font-bold text-lambs-ear">
@@ -24,11 +24,11 @@ export function Hero() {
               </span>
             </div>
 
-            <h1 className="font-display text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl leading-[0.95] tracking-tight mb-10 text-monstera">
+            <h1 className="font-display text-[2.5rem] sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl leading-[1.05] sm:leading-[0.95] tracking-tight mb-8 sm:mb-10 text-monstera">
               Traduzindo complexidades em caminhos possíveis
             </h1>
 
-            <p className="text-lg lg:text-xl max-w-lg text-muted mb-12 leading-relaxed pl-6 border-l-2 border-ginkgo">
+            <p className="text-base sm:text-lg lg:text-xl max-w-lg text-muted mb-10 sm:mb-12 leading-relaxed pl-5 sm:pl-6 border-l-2 border-ginkgo">
               Dê um passo em direção a uma vida com mais sentido, olhando para si
               com presença e cuidado.
             </p>
@@ -36,7 +36,7 @@ export function Hero() {
             <div className="flex flex-col sm:flex-row gap-4">
               <a
                 href="#sobre"
-                className="inline-flex items-center justify-center h-14 px-10 bg-monstera text-white text-xs font-bold uppercase tracking-[0.2em] shadow-2xl hover:bg-walnut hover:shadow-walnut/50 transition-all duration-300 group"
+                className="inline-flex items-center justify-center h-14 sm:h-14 px-8 sm:px-10 bg-monstera text-white text-[11px] sm:text-xs font-bold uppercase tracking-[0.2em] shadow-2xl hover:bg-walnut hover:shadow-walnut/50 transition-all duration-300 group"
               >
                 Conhecer a Profissional{' '}
                 <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
@@ -45,7 +45,7 @@ export function Hero() {
           </div>
 
           {/* Mobile Image - Shows below content on mobile, hidden on desktop */}
-          <div className="lg:hidden w-full max-w-md mx-auto reveal delay-200">
+          <div className="order-1 lg:order-2 lg:hidden w-full max-w-md mx-auto reveal delay-200">
             <div className="relative h-[50vh] group">
               <div className="absolute inset-0 bg-ginkgo/20 mask-organic translate-x-3 translate-y-3" />
               <img

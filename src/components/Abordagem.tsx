@@ -9,10 +9,10 @@ export function Abordagem() {
           <span className="text-[10px] uppercase tracking-[0.25em] font-bold text-walnut block mb-6 opacity-70">
             Metodologia
           </span>
-          <h2 className="font-display text-5xl lg:text-7xl mb-8 leading-none text-monstera">
+          <h2 className="font-display text-4xl sm:text-5xl lg:text-7xl mb-6 sm:mb-8 leading-none text-monstera">
             Minha Abordagem
           </h2>
-          <p className="opacity-80 leading-relaxed mb-2 text-monstera font-display italic text-2xl">
+          <p className="opacity-80 leading-relaxed mb-2 text-monstera font-display italic text-xl sm:text-2xl">
             Base científica. Sensibilidade humana.
           </p>
           <p className="text-lg opacity-80 leading-relaxed mb-10 text-monstera">
@@ -24,7 +24,7 @@ export function Abordagem() {
           </p>
         </div>
         <div className="grid grid-cols-1 gap-6">
-          <div className="bg-lambs-ear/10 border-2 border-lambs-ear/30 text-monstera p-8 rounded-[2.5rem] hover:bg-lambs-ear/20 hover:border-lambs-ear/50 transition-all duration-300">
+          <div className="bg-lambs-ear/10 border-2 border-lambs-ear/30 text-monstera p-6 sm:p-8 rounded-[2rem] sm:rounded-[2.5rem] hover:bg-lambs-ear/20 hover:border-lambs-ear/50 transition-all duration-300">
             <h3 className="font-display text-3xl mb-2 text-lambs-ear">ACT</h3>
             <p className="text-sm opacity-80 font-sans leading-relaxed">
               A ACT é particularmente útil para dificuldades intrapessoais.
@@ -32,7 +32,7 @@ export function Abordagem() {
               agir conforme seus valores pessoais.
             </p>
           </div>
-          <div className="bg-walnut/10 border-2 border-walnut/30 text-monstera p-8 rounded-[2.5rem] hover:bg-walnut/20 hover:border-walnut/50 transition-all duration-300">
+          <div className="bg-walnut/10 border-2 border-walnut/30 text-monstera p-6 sm:p-8 rounded-[2rem] sm:rounded-[2.5rem] hover:bg-walnut/20 hover:border-walnut/50 transition-all duration-300">
             <h3 className="font-display text-3xl mb-2 text-walnut">FAP</h3>
             <p className="text-sm opacity-80 font-sans leading-relaxed">
               A FAP é particularmente útil para dificuldades interpessoais.

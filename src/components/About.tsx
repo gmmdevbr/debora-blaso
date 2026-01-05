@@ -51,13 +51,13 @@ export function About() {
     >
       <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-24 items-start">
         <div className="order-2 lg:order-1 reveal">
-          <h2 className="font-display text-5xl lg:text-7xl tracking-tighter leading-none mb-10 text-monstera">
+          <h2 className="font-display text-4xl sm:text-5xl lg:text-7xl tracking-tighter leading-none mb-8 sm:mb-10 text-monstera">
             Quem é <br />{' '}
-            <span className="italic text-walnut font-script text-6xl lg:text-7xl">
+            <span className="italic text-walnut font-script text-5xl sm:text-6xl lg:text-7xl">
               Débora Blaso?
             </span>
           </h2>
-          <div className="space-y-6 text-lg text-muted leading-relaxed text-justify lg:text-left font-sans">
+          <div className="space-y-5 sm:space-y-6 text-base sm:text-lg text-muted leading-relaxed text-left font-sans">
             <p>
               Meu trabalho é voltado para mulheres que estão oficialmente
               cansadas de tentar dar conta de tudo — carreira, aparência,
@@ -87,7 +87,7 @@ export function About() {
                   return (
                     <li
                       key={index}
-                      className="flex items-start gap-3 text-monstera text-xs leading-relaxed"
+                      className="flex items-start gap-3 text-monstera text-[13px] sm:text-xs leading-relaxed"
                     >
                       <Icon className="w-4 h-4 text-walnut shrink-0 mt-0.5" />
                       <span>{item.text}</span>

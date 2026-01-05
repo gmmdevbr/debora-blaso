@@ -66,14 +66,14 @@ export function Reviews() {
       className="py-32 px-6 md:px-12 bg-summer-sand scroll-mt-20"
     >
       <div className="max-w-7xl mx-auto">
-        <div className="text-center mb-20 reveal">
+        <div className="text-center mb-16 sm:mb-20 reveal">
           <span className="text-[10px] uppercase tracking-[0.25em] font-bold text-walnut block mb-6 opacity-70">
             Depoimentos
           </span>
-          <h2 className="font-display text-5xl lg:text-7xl mb-6 leading-none text-monstera">
+          <h2 className="font-display text-4xl sm:text-5xl lg:text-7xl mb-6 leading-none text-monstera">
             O que dizem sobre o processo
           </h2>
-          <p className="text-lg opacity-80 leading-relaxed text-monstera max-w-3xl mx-auto">
+          <p className="text-base sm:text-lg opacity-80 leading-relaxed text-monstera max-w-3xl mx-auto">
             Cada trajetória é única, mas todas compartilham a busca por
             transformação genuína.
           </p>
@@ -83,19 +83,19 @@ export function Reviews() {
           {testimonials.map((testimonial) => (
             <div
               key={testimonial.id}
-              className="reveal bg-white/40 border-2 border-monstera/15 rounded-3xl p-8 hover:border-monstera/30 hover:bg-white/60 transition-all duration-500 group"
+              className="reveal bg-white/40 border-2 border-monstera/15 rounded-2xl sm:rounded-3xl p-6 sm:p-8 hover:border-monstera/30 hover:bg-white/60 transition-all duration-500 group"
             >
-              <div className="flex items-start gap-4 mb-6">
-                <div className="w-14 h-14 rounded-full bg-gradient-to-br from-walnut to-lambs-ear flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-500">
-                  <span className="text-white font-display text-2xl">
+              <div className="flex items-start gap-3 sm:gap-4 mb-5 sm:mb-6">
+                <div className="w-12 h-12 sm:w-14 sm:h-14 rounded-full bg-gradient-to-br from-walnut to-lambs-ear flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-500">
+                  <span className="text-white font-display text-xl sm:text-2xl">
                     {testimonial.initial}
                   </span>
                 </div>
                 <div className="flex-1">
-                  <h3 className="font-display text-xl text-monstera mb-1">
+                  <h3 className="font-display text-lg sm:text-xl text-monstera mb-1">
                     {testimonial.name}
                   </h3>
-                  <p className="text-xs uppercase tracking-wider text-walnut opacity-70">
+                  <p className="text-[10px] sm:text-xs uppercase tracking-wider text-walnut opacity-70">
                     {testimonial.role}
                   </p>
                 </div>

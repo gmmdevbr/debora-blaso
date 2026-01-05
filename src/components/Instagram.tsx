@@ -11,7 +11,7 @@ export function InstagramConnect() {
   return (
     <section className="py-32 px-6 md:px-12 bg-summer-sand overflow-hidden">
       <div className="max-w-7xl mx-auto">
-        <div className="flex flex-col md:flex-row justify-between items-end mb-12 reveal">
+        <div className="flex flex-col md:flex-row justify-between items-center md:items-end mb-12 reveal text-center md:text-left">
           <div>
             <h2 className="font-display text-4xl lg:text-5xl text-monstera mb-2">
               Conecte-se
@@ -20,7 +20,7 @@ export function InstagramConnect() {
               href="https://instagram.com/debora.blaso"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-walnut hover:underline flex items-center gap-2 font-bold tracking-wide"
+              className="text-walnut hover:underline flex items-center justify-center md:justify-start gap-2 font-bold tracking-wide"
             >
               <InstagramIcon className="w-4 h-4" /> @debora.blaso
             </a>
