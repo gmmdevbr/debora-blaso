@@ -13,7 +13,8 @@ export function CtaSchedule() {
           rel="noopener noreferrer"
           className="inline-flex items-center justify-center h-16 sm:h-20 px-10 sm:px-16 bg-ginkgo text-monstera text-sm sm:text-base font-bold uppercase tracking-[0.2em] shadow-2xl hover:bg-ginkgo/90 hover:scale-105 transition-all duration-300 rounded-sm"
         >
-          <MessageCircle className="w-6 h-6 mr-3" /> Quero agendar minha primeira sessão
+          <MessageCircle className="w-6 h-6 mr-3" /> Quero agendar minha
+          primeira sessão
         </a>
       </div>
     </section>

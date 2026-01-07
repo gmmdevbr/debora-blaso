@@ -116,14 +116,20 @@ function FlipCard({ card }: { card: CardData }) {
         </div>
         <div className="flip-card-back bg-monstera text-summer-sand p-6 sm:p-8 flex flex-col justify-center min-h-100">
           <ul className="space-y-2.5">
-            {card.backText.split('. ').filter(text => text.trim()).map((point, idx) => (
-              <li key={idx} className="flex gap-3 items-start">
-                <span className="text-ginkgo mt-0.5 shrink-0 text-base">•</span>
-                <span className="text-xs sm:text-[13px] leading-relaxed font-sans text-left">
-                  {point.trim()}{point.endsWith('.') ? '' : '.'}
-                </span>
-              </li>
-            ))}
+            {card.backText
+              .split('. ')
+              .filter((text) => text.trim())
+              .map((point, idx) => (
+                <li key={idx} className="flex gap-3 items-start">
+                  <span className="text-ginkgo mt-0.5 shrink-0 text-base">
+                    •
+                  </span>
+                  <span className="text-xs sm:text-[13px] leading-relaxed font-sans text-left">
+                    {point.trim()}
+                    {point.endsWith('.') ? '' : '.'}
+                  </span>
+                </li>
+              ))}
           </ul>
         </div>
       </div>

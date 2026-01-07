@@ -19,7 +19,8 @@ export function Contact() {
           rel="noopener noreferrer"
           className="inline-flex items-center gap-2 sm:gap-3 text-xl sm:text-2xl font-display text-lambs-ear hover:text-monstera transition-colors border-b-2 border-lambs-ear hover:border-monstera pb-1"
         >
-          Iniciar conversa no WhatsApp <ArrowUpRight className="w-5 h-5 sm:w-6 sm:h-6" />
+          Iniciar conversa no WhatsApp{' '}
+          <ArrowUpRight className="w-5 h-5 sm:w-6 sm:h-6" />
         </a>
       </div>
     </section>

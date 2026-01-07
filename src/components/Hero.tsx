@@ -1,5 +1,4 @@
 import { ArrowRight } from 'lucide-react';
-import heroImage from '../assets/images/JFR_2516.webp';
 
 export function Hero() {
   return (
@@ -22,8 +21,8 @@ export function Hero() {
             </h1>
 
             <p className="text-base sm:text-lg lg:text-xl max-w-lg text-muted mb-10 sm:mb-12 leading-relaxed pl-5 sm:pl-6 border-l-2 border-ginkgo">
-              Dê um passo em direção a uma vida com mais sentido, olhando para si
-              com presença e cuidado.
+              Dê um passo em direção a uma vida com mais sentido, olhando para
+              si com presença e cuidado.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4">
