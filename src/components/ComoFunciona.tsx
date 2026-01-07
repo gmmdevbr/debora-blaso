@@ -52,7 +52,7 @@ export function ComoFunciona() {
             </div>
           ))}
         </div>
-        <div className="mt-12 sm:mt-16 p-5 sm:p-6 bg-lambs-ear/10 rounded-xl sm:rounded-2xl border-2 border-lambs-ear/20 flex gap-3 sm:gap-4 items-start max-w-2xl mx-auto reveal">
+        <div className="mt-8 p-5 sm:p-6 bg-lambs-ear/10 rounded-xl sm:rounded-2xl border-2 border-lambs-ear/20 flex gap-3 sm:gap-4 items-start max-w-2xl mx-auto reveal">
           <div className="bg-lambs-ear p-2 rounded-full shrink-0">
             <CheckCircle className="w-4 h-4 text-summer-sand" />
           </div>
