@@ -1,3 +1,5 @@
+import { CheckCircle } from 'lucide-react';
+
 const steps = [
   {
     number: '01',
@@ -49,6 +51,19 @@ export function ComoFunciona() {
               <p className="text-muted leading-relaxed">{step.description}</p>
             </div>
           ))}
+        </div>
+        <div className="mt-12 sm:mt-16 p-5 sm:p-6 bg-lambs-ear/10 rounded-xl sm:rounded-2xl border-2 border-lambs-ear/20 flex gap-3 sm:gap-4 items-start max-w-2xl mx-auto reveal">
+          <div className="bg-lambs-ear p-2 rounded-full shrink-0">
+            <CheckCircle className="w-4 h-4 text-summer-sand" />
+          </div>
+          <div className="text-left">
+            <h4 className="font-bold text-monstera text-sm uppercase tracking-wide mb-1">
+              Nota sobre Convênios
+            </h4>
+            <p className="text-sm text-monstera/80 leading-relaxed">
+              Meus atendimentos são somente particulares, mas emito nota fiscal que pode ser utilizada para solicitação de reembolso, caso seu convênio realize. Se tiver dúvidas de como funciona o processo de reembolso, basta entrar em contato com a sua operadora de plano de saúde.
+            </p>
+          </div>
         </div>
       </div>
     </section>

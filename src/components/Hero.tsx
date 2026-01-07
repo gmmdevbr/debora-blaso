@@ -3,20 +3,20 @@ import heroImage from '../assets/images/JFR_2516.webp';
 
 export function Hero() {
   return (
-    <section className="hero-section relative min-h-screen flex items-center overflow-hidden">
+    <section className="hero-section relative min-h-screen flex items-end lg:items-center overflow-hidden">
       {/* Background Image - Desktop only with overlay */}
       <div className="hero-background" />
 
-      {/* Gradient Overlay for readability */}
-      <div className="absolute inset-0 bg-linear-to-r from-summer-sand/98 via-summer-sand/95 to-summer-sand/60 lg:from-summer-sand/95 lg:via-summer-sand/85 lg:to-transparent z-0" />
+      {/* Gradient Overlay for readability - adjusted for mobile */}
+      <div className="absolute inset-0 bg-linear-to-b from-summer-sand/30 via-summer-sand/75 to-summer-sand/98 lg:bg-linear-to-r lg:from-summer-sand/95 lg:via-summer-sand/85 lg:to-transparent z-0" />
 
       {/* Subtle decorative blob */}
       <div className="absolute top-0 right-0 w-[40vw] h-[40vw] bg-ginkgo/10 rounded-full blur-[120px] -z-10 translate-x-1/4 -translate-y-1/4 hidden lg:block" />
 
-      <div className="max-w-7xl mx-auto w-full px-6 md:px-12 py-24 lg:py-32 relative z-10">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 items-start">
-          {/* Content - Left side on desktop, centered on mobile */}
-          <div className="order-2 lg:order-1 lg:col-span-7 reveal">
+      <div className="max-w-7xl mx-auto w-full px-6 md:px-12 py-12 pb-20 lg:py-32 relative z-10">
+        <div className="lg:grid lg:grid-cols-12 lg:gap-16">
+          {/* Content - Centered with background image on all devices */}
+          <div className="lg:col-span-7 reveal">
             <h1 className="font-display text-[2.5rem] sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl leading-[1.05] sm:leading-[0.95] tracking-tight mb-8 sm:mb-10 text-monstera">
               Traduzindo complexidades em caminhos possíveis
             </h1>
@@ -34,19 +34,6 @@ export function Hero() {
                 Conhecer a Profissional{' '}
                 <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
               </a>
-            </div>
-          </div>
-
-          {/* Mobile Image - Shows below content on mobile, hidden on desktop */}
-          <div className="order-1 lg:order-2 lg:hidden w-full max-w-md mx-auto reveal delay-200">
-            <div className="relative h-[50vh] group">
-              <div className="absolute inset-0 bg-ginkgo/20 mask-organic translate-x-3 translate-y-3" />
-              <img
-                src={heroImage}
-                alt="Débora Blaso Psicóloga"
-                className="w-full h-full object-cover mask-organic relative z-10 group-hover:scale-105 transition-transform duration-700"
-                loading="eager"
-              />
             </div>
           </div>
         </div>

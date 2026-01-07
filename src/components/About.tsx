@@ -114,7 +114,7 @@ export function About() {
           </div>
         </div>
         <div className="order-1 lg:order-2 relative w-full aspect-square reveal delay-200 lg:sticky lg:top-24">
-          <div className="absolute inset-0 bg-monstera/20 mask-organic -scale-x-100 -translate-x-6 -translate-y-6" />
+          <div className="absolute inset-0 bg-walnut/20 mask-organic -scale-x-100 -translate-x-6 -translate-y-6" />
           <img
             src={aboutImage}
             alt="Débora Blaso Retrato"

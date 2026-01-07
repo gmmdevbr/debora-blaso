@@ -279,14 +279,22 @@ html {
   background-size: cover;
   background-position: center 30%;
   background-repeat: no-repeat;
-  opacity: 0;
+  opacity: 1;
   transition: opacity 0.6s ease-out;
 }
 
-/* Show background image only on desktop */
+/* Mobile adjustments */
+@media (max-width: 1023px) {
+  .hero-background {
+    background-position: center 0;
+    background-size: auto 120%;
+    top: -30%;
+  }
+}
+
+/* Desktop adjustments */
 @media (min-width: 1024px) {
   .hero-background {
-    opacity: 1;
     background-position: 65% 35%;
   }
 }

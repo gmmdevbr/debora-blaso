@@ -92,11 +92,11 @@ function FlipCard({ card }: { card: CardData }) {
       aria-label={`Card: ${card.title} - Click to flip`}
     >
       <div className="flip-card-inner">
-        <div className="flip-card-front bg-summer-sand text-monstera border border-monstera/10 p-6 sm:p-8 lg:p-10 flex flex-col justify-center items-center shadow-lg min-h-100 text-center sm:text-left sm:items-start sm:justify-between gap-4 sm:gap-0">
-          <div className="w-12 h-12 sm:w-14 sm:h-14 bg-lambs-ear rounded-full flex items-center justify-center">
+        <div className="flip-card-front bg-summer-sand text-monstera border border-monstera/10 p-6 sm:p-8 lg:p-10 flex flex-col shadow-lg min-h-100">
+          <div className="w-12 h-12 sm:w-14 sm:h-14 bg-lambs-ear rounded-full flex items-center justify-center shrink-0">
             <Icon className="w-5 h-5 sm:w-6 sm:h-6 text-summer-sand" />
           </div>
-          <h3 className="font-display text-2xl sm:text-3xl leading-tight flex-grow sm:flex-grow-0 flex items-center justify-center sm:justify-start sm:items-start sm:pt-4">
+          <h3 className="font-display text-xl sm:text-2xl lg:text-[1.65rem] leading-tight mt-6 mb-auto">
             {card.title.split('&').map((part, i, arr) =>
               i < arr.length - 1 ? (
                 <span key={part}>
@@ -107,19 +107,19 @@ function FlipCard({ card }: { card: CardData }) {
               )
             )}
           </h3>
-          <div className="pt-6 sm:pt-8 border-t border-monstera/10 w-full flex justify-center sm:justify-between items-center opacity-50 gap-2 sm:mt-auto">
+          <div className="pt-6 mt-6 border-t border-monstera/10 w-full flex justify-between items-center opacity-50 gap-2">
             <span className="text-[10px] uppercase tracking-[0.25em] font-bold">
               Ver Detalhes
             </span>
             <Plus className="w-4 h-4" />
           </div>
         </div>
-        <div className="flip-card-back bg-monstera text-summer-sand p-8 flex flex-col justify-start min-h-100 overflow-y-auto">
+        <div className="flip-card-back bg-monstera text-summer-sand p-6 sm:p-8 flex flex-col justify-center min-h-100">
           <ul className="space-y-2.5">
             {card.backText.split('. ').filter(text => text.trim()).map((point, idx) => (
               <li key={idx} className="flex gap-3 items-start">
-                <span className="text-walnut mt-0.5 shrink-0 text-base">•</span>
-                <span className="text-xs leading-relaxed font-sans text-left">
+                <span className="text-ginkgo mt-0.5 shrink-0 text-base">•</span>
+                <span className="text-xs sm:text-[13px] leading-relaxed font-sans text-left">
                   {point.trim()}{point.endsWith('.') ? '' : '.'}
                 </span>
               </li>
