@@ -63,11 +63,11 @@ export function Reviews() {
   return (
     <section
       id="reviews"
-      className="py-32 px-6 md:px-12 bg-summer-sand scroll-mt-20"
+      className="py-8 px-6 md:px-12 bg-summer-sand scroll-mt-20"
     >
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16 sm:mb-20 reveal">
-          <span className="text-[10px] uppercase tracking-[0.25em] font-bold text-walnut block mb-6 opacity-70">
+          <span className="text-[10px] uppercase tracking-[0.25em] font-bold text-lambs-ear block mb-6 opacity-70">
             Depoimentos
           </span>
           <h2 className="font-display text-4xl sm:text-5xl lg:text-7xl mb-6 leading-none text-monstera">
@@ -86,7 +86,7 @@ export function Reviews() {
               className="reveal bg-white/40 border-2 border-monstera/15 rounded-2xl sm:rounded-3xl p-6 sm:p-8 hover:border-monstera/30 hover:bg-white/60 transition-all duration-500 group"
             >
               <div className="flex items-start gap-3 sm:gap-4 mb-5 sm:mb-6">
-                <div className="w-12 h-12 sm:w-14 sm:h-14 rounded-full bg-gradient-to-br from-walnut to-lambs-ear flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-500">
+                <div className="w-12 h-12 sm:w-14 sm:h-14 rounded-full bg-linear-to-br from-walnut to-lambs-ear flex items-center justify-center shrink-0 group-hover:scale-110 transition-transform duration-500">
                   <span className="text-white font-display text-xl sm:text-2xl">
                     {testimonial.initial}
                   </span>
@@ -99,7 +99,7 @@ export function Reviews() {
                     {testimonial.role}
                   </p>
                 </div>
-                <Quote className="w-8 h-8 text-ginkgo/30 flex-shrink-0" />
+                <Quote className="w-8 h-8 text-ginkgo/30 shrink-0" />
               </div>
               <p className="text-monstera leading-relaxed opacity-90 text-[15px]">
                 {testimonial.content}

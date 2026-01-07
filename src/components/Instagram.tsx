@@ -9,25 +9,25 @@ const images = [
 
 export function InstagramConnect() {
   return (
-    <section className="py-32 px-6 md:px-12 bg-summer-sand overflow-hidden">
+    <section className="py-8 px-6 md:px-12 bg-summer-sand overflow-hidden">
       <div className="max-w-7xl mx-auto">
         <div className="flex flex-col md:flex-row justify-between items-center md:items-end mb-12 reveal text-center md:text-left">
           <div>
-            <h2 className="font-display text-4xl lg:text-5xl text-monstera mb-2">
-              Conecte-se
+            <h2 className="font-display text-4xl lg:text-5xl text-monstera mb-3">
+              Conecte-se comigo
             </h2>
+            <p className="text-muted max-w-md mb-2 md:mb-3">
+              Insights diários sobre comportamento, estilo e vida real.
+            </p>
             <a
               href="https://instagram.com/debora.blaso"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-walnut hover:underline flex items-center justify-center md:justify-start gap-2 font-bold tracking-wide"
+              className="text-lambs-ear hover:underline flex items-center justify-center md:justify-start gap-2 font-bold tracking-wide"
             >
               <InstagramIcon className="w-4 h-4" /> @debora.blaso
             </a>
           </div>
-          <p className="text-muted max-w-md text-right hidden md:block">
-            Insights diários sobre comportamento, estilo e vida real.
-          </p>
         </div>
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4 reveal delay-200">
           {images.map((src, index) => (

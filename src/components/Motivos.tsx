@@ -135,7 +135,7 @@ export function Motivos() {
   return (
     <section
       id="motivos"
-      className="py-32 px-6 md:px-12 bg-summer-sand scroll-mt-20"
+      className="py-8 px-6 md:px-12 bg-summer-sand scroll-mt-20"
     >
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16 sm:mb-20 reveal">

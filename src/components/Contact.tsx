@@ -2,10 +2,12 @@ import { ArrowUpRight } from 'lucide-react';
 
 export function Contact() {
   return (
-    <section className="py-32 px-6 md:px-12 bg-summer-sand border-t-2 border-monstera/10">
+    <section className="py-8 px-6 md:px-12 bg-summer-sand border-t-2 border-monstera/10">
       <div className="max-w-3xl mx-auto text-center reveal">
         <h2 className="font-display text-4xl sm:text-5xl lg:text-6xl text-monstera mb-6">
-          Fale Comigo
+          Tem dúvidas?
+          <br />
+          Fale comigo no WhatsApp!
         </h2>
         <p className="text-base sm:text-lg text-muted mb-8 sm:mb-10 leading-relaxed">
           Dúvidas sobre como a terapia funciona ou se este é o momento certo?
@@ -15,7 +17,7 @@ export function Contact() {
           href="https://wa.me/5500000000000"
           target="_blank"
           rel="noopener noreferrer"
-          className="inline-flex items-center gap-2 sm:gap-3 text-xl sm:text-2xl font-display text-walnut hover:text-monstera transition-colors border-b-2 border-walnut hover:border-monstera pb-1"
+          className="inline-flex items-center gap-2 sm:gap-3 text-xl sm:text-2xl font-display text-lambs-ear hover:text-monstera transition-colors border-b-2 border-lambs-ear hover:border-monstera pb-1"
         >
           Iniciar conversa no WhatsApp <ArrowUpRight className="w-5 h-5 sm:w-6 sm:h-6" />
         </a>

@@ -4,7 +4,7 @@ export function Services() {
   return (
     <section
       id="servicos"
-      className="py-32 px-6 md:px-12 bg-summer-sand scroll-mt-20"
+      className="py-8 px-6 md:px-12 bg-summer-sand scroll-mt-20"
     >
       <div className="max-w-7xl mx-auto">
         <div className="mb-16 sm:mb-20 text-center reveal">

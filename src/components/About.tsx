@@ -47,7 +47,7 @@ export function About() {
   return (
     <section
       id="sobre"
-      className="py-32 px-6 md:px-12 bg-summer-sand scroll-mt-20"
+      className="py-8 px-6 md:px-12 bg-summer-sand scroll-mt-20"
     >
       <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-24 items-start">
         <div className="order-2 lg:order-1 reveal">
@@ -78,7 +78,7 @@ export function About() {
 
           <div className="mt-12 space-y-12">
             <div>
-              <span className="text-[10px] uppercase tracking-[0.25em] font-bold text-walnut block mb-6 border-b border-monstera/10 pb-2">
+              <span className="text-[10px] uppercase tracking-[0.25em] font-bold text-lambs-ear block mb-6 border-b border-monstera/10 pb-2">
                 Formações & Certificações
               </span>
               <ul className="space-y-3">
@@ -89,7 +89,7 @@ export function About() {
                       key={index}
                       className="flex items-start gap-3 text-monstera text-[13px] sm:text-xs leading-relaxed"
                     >
-                      <Icon className="w-4 h-4 text-walnut shrink-0 mt-0.5" />
+                      <Icon className="w-4 h-4 text-lambs-ear shrink-0 mt-0.5" />
                       <span>{item.text}</span>
                     </li>
                   );
@@ -97,13 +97,13 @@ export function About() {
               </ul>
             </div>
             <div>
-              <span className="text-[10px] uppercase tracking-[0.25em] font-bold text-walnut block mb-6 border-b border-monstera/10 pb-2">
+              <span className="text-[10px] uppercase tracking-[0.25em] font-bold text-lambs-ear block mb-6 border-b border-monstera/10 pb-2">
                 Valores Pessoais
               </span>
               <div className="grid grid-cols-2 gap-4">
                 {values.map((value, index) => (
                   <div key={index} className="flex items-center gap-2">
-                    <div className="w-1.5 h-1.5 rounded-full bg-walnut" />
+                    <div className="w-1.5 h-1.5 rounded-full bg-lambs-ear" />
                     <span className="text-sm font-bold text-monstera">
                       {value}
                     </span>
@@ -114,7 +114,7 @@ export function About() {
           </div>
         </div>
         <div className="order-1 lg:order-2 relative w-full aspect-square reveal delay-200 lg:sticky lg:top-24">
-          <div className="absolute inset-0 bg-walnut/20 mask-organic -scale-x-100 -translate-x-6 -translate-y-6" />
+          <div className="absolute inset-0 bg-monstera/20 mask-organic -scale-x-100 -translate-x-6 -translate-y-6" />
           <img
             src={aboutImage}
             alt="Débora Blaso Retrato"

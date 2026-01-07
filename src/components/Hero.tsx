@@ -8,7 +8,7 @@ export function Hero() {
       <div className="hero-background" />
 
       {/* Gradient Overlay for readability */}
-      <div className="absolute inset-0 bg-gradient-to-r from-summer-sand/98 via-summer-sand/95 to-summer-sand/60 lg:from-summer-sand/95 lg:via-summer-sand/85 lg:to-transparent z-0" />
+      <div className="absolute inset-0 bg-linear-to-r from-summer-sand/98 via-summer-sand/95 to-summer-sand/60 lg:from-summer-sand/95 lg:via-summer-sand/85 lg:to-transparent z-0" />
 
       {/* Subtle decorative blob */}
       <div className="absolute top-0 right-0 w-[40vw] h-[40vw] bg-ginkgo/10 rounded-full blur-[120px] -z-10 translate-x-1/4 -translate-y-1/4 hidden lg:block" />
@@ -17,13 +17,6 @@ export function Hero() {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 items-start">
           {/* Content - Left side on desktop, centered on mobile */}
           <div className="order-2 lg:order-1 lg:col-span-7 reveal">
-            <div className="flex items-center gap-3 mb-8">
-              <span className="w-12 h-px bg-ginkgo" />
-              <span className="text-[10px] uppercase tracking-[0.25em] font-bold text-lambs-ear">
-                Psicologia Clínica & Imagem Corporal
-              </span>
-            </div>
-
             <h1 className="font-display text-[2.5rem] sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl leading-[1.05] sm:leading-[0.95] tracking-tight mb-8 sm:mb-10 text-monstera">
               Traduzindo complexidades em caminhos possíveis
             </h1>
@@ -36,7 +29,7 @@ export function Hero() {
             <div className="flex flex-col sm:flex-row gap-4">
               <a
                 href="#sobre"
-                className="inline-flex items-center justify-center h-14 sm:h-14 px-8 sm:px-10 bg-monstera text-white text-[11px] sm:text-xs font-bold uppercase tracking-[0.2em] shadow-2xl hover:bg-walnut hover:shadow-walnut/50 transition-all duration-300 group"
+                className="inline-flex items-center justify-center h-14 sm:h-14 px-8 sm:px-10 bg-monstera text-white text-[11px] sm:text-xs font-bold uppercase tracking-[0.2em] shadow-2xl hover:bg-lambs-ear hover:shadow-lambs-ear/50 transition-all duration-300 group"
               >
                 Conhecer a Profissional{' '}
                 <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />

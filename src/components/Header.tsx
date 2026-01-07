@@ -39,33 +39,33 @@ export function Header() {
           <nav className="hidden lg:flex items-center gap-8 text-[11px] font-bold uppercase tracking-[0.2em] text-monstera">
             <a
               href="#sobre"
-              className="hover:text-walnut transition-colors relative py-1 hover:after:w-full after:absolute after:bottom-0 after:left-0 after:w-0 after:h-px after:bg-walnut after:transition-all"
+              className="hover:text-lambs-ear transition-colors relative py-1 hover:after:w-full after:absolute after:bottom-0 after:left-0 after:w-0 after:h-px after:bg-lambs-ear after:transition-all"
             >
               Sobre
             </a>
             <a
               href="#motivos"
-              className="hover:text-walnut transition-colors relative py-1 hover:after:w-full after:absolute after:bottom-0 after:left-0 after:w-0 after:h-px after:bg-walnut after:transition-all"
+              className="hover:text-lambs-ear transition-colors relative py-1 hover:after:w-full after:absolute after:bottom-0 after:left-0 after:w-0 after:h-px after:bg-lambs-ear after:transition-all"
             >
               Motivos
             </a>
             <a
               href="#como-funciona"
-              className="hover:text-walnut transition-colors relative py-1 hover:after:w-full after:absolute after:bottom-0 after:left-0 after:w-0 after:h-px after:bg-walnut after:transition-all"
+              className="hover:text-lambs-ear transition-colors relative py-1 hover:after:w-full after:absolute after:bottom-0 after:left-0 after:w-0 after:h-px after:bg-lambs-ear after:transition-all"
             >
               Como Funciona
             </a>
             <a
-              href="#servicos"
-              className="hover:text-walnut transition-colors relative py-1 hover:after:w-full after:absolute after:bottom-0 after:left-0 after:w-0 after:h-px after:bg-walnut after:transition-all"
+              href="#abordagem"
+              className="hover:text-lambs-ear transition-colors relative py-1 hover:after:w-full after:absolute after:bottom-0 after:left-0 after:w-0 after:h-px after:bg-lambs-ear after:transition-all"
             >
-              O Clube
+              Abordagem
             </a>
             <a
               href="https://wa.me/5500000000000"
               target="_blank"
               rel="noopener noreferrer"
-              className="bg-monstera text-summer-sand px-6 py-2 rounded-sm hover:bg-walnut hover:text-white transition-all shadow-lg"
+              className="bg-monstera text-summer-sand px-6 py-2 rounded-sm hover:bg-lambs-ear hover:text-white transition-all shadow-lg"
             >
               Agendar
             </a>
