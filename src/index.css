@@ -348,20 +348,34 @@ html {
   padding: 0 !important;
 }
 
-/* Crop Instagram embed to show only image */
+/* Crop Instagram embed to show only image - consistent across all devices */
 .instagram-crop {
-  height: 370px;
+  aspect-ratio: 4 / 4.9;
   width: 100%;
   overflow: hidden;
   position: relative;
   background: transparent;
 }
 
-/* Hide the Instagram header (profile info) and center the image */
-.instagram-crop iframe,
+/* Force consistent embed dimensions */
 .instagram-crop > div {
-  margin-top: -58px;
-  margin-bottom: -100px;
+  position: absolute !important;
+  top: -56px !important;
+  left: 0 !important;
+  right: 0 !important;
   width: 100% !important;
+  height: calc(100% + 56px + 150px) !important;
+  margin: 0 !important;
+}
+
+.instagram-crop iframe {
+  position: absolute !important;
+  top: 0 !important;
+  left: 0 !important;
+  width: 100% !important;
+  height: 100% !important;
   min-width: 100% !important;
+  max-width: 100% !important;
+  transform: none !important;
+  border: none !important;
 }
