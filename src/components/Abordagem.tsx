@@ -4,7 +4,7 @@ export function Abordagem() {
       id="abordagem"
       className="py-8 px-6 md:px-12 bg-summer-sand scroll-mt-20"
     >
-      <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
+      <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-4 items-center">
         <div className="reveal">
           <span className="text-[10px] uppercase tracking-[0.25em] font-bold text-lambs-ear block mb-6 opacity-70">
             Minha Abordagem
