@@ -1,6 +1,6 @@
 import { ArrowRight, ExternalLink, Mic, Sparkles } from 'lucide-react';
-import clubeImage from '../assets/images/JFR_2689.jpg';
-import talksImage from '../assets/images/JFR_2464.jpg';
+import clubeImage from '../assets/images/JFR_2689.webp';
+import talksImage from '../assets/images/JFR_2464.webp';
 
 export function Services() {
   return (
