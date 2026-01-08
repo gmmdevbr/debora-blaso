@@ -1,61 +1,45 @@
-import { Quote } from 'lucide-react';
+import { Star, ExternalLink } from 'lucide-react';
 
 interface Testimonial {
   id: number;
   name: string;
-  role: string;
   content: string;
   initial: string;
+  rating: number;
 }
 
 const testimonials: Testimonial[] = [
   {
     id: 1,
-    name: 'Ana Carolina M.',
-    role: 'Designer de Moda',
+    name: 'Natália Romão',
     content:
-      'A terapia me ajudou a entender padrões que eu repetia há anos. Hoje consigo fazer escolhas mais alinhadas com quem eu realmente sou. Gratidão imensa por todo acolhimento e profissionalismo.',
-    initial: 'A',
+      'A Débora é uma profissional incrível, extremamente capacitada e atenciosa. Sou muito grata e feliz pelos atendimentos que tive com ela, pois teve um impacto muito positivo na minha vida! Recomendo de olhos fechados!!',
+    initial: 'N',
+    rating: 5,
   },
   {
     id: 2,
-    name: 'Juliana S.',
-    role: 'Empresária',
+    name: 'Thauane Joviano',
     content:
-      'Débora tem uma escuta sensível e ao mesmo tempo direcionada. Ela me ajudou a ressignificar momentos difíceis e a criar estratégias práticas para lidar com a ansiedade no dia a dia.',
-    initial: 'J',
+      'A Débora é simplesmente maravilhosa! Com ela eu aprendi não só a importância da terapia como entendi mais sobre mim, sobre meu diagnóstico, ela é fera!',
+    initial: 'T',
+    rating: 5,
   },
   {
     id: 3,
-    name: 'Mariana P.',
-    role: 'Arquiteta',
+    name: 'Giselle Santosa',
     content:
-      'O trabalho com a ACT transformou minha relação com os pensamentos. Aprendi a observá-los sem me deixar dominar. Recomendo de olhos fechados!',
-    initial: 'M',
+      'Profissional incrível, super atenta e empática. Consegue ajudar a entender melhor os pensamentos e emoções de uma forma muito acolhedora. Recomendo de coração!',
+    initial: 'G',
+    rating: 5,
   },
   {
     id: 4,
-    name: 'Beatriz R.',
-    role: 'Jornalista',
+    name: 'Julia Vilela',
     content:
-      'Finalmente encontrei um espaço seguro para falar sobre tudo. A abordagem é humanizada e baseada em evidências, exatamente o que eu procurava. Minha vida mudou depois que comecei a terapia.',
-    initial: 'B',
-  },
-  {
-    id: 5,
-    name: 'Camila F.',
-    role: 'Professora',
-    content:
-      'A terapia me deu ferramentas concretas para lidar com situações que antes me paralisavam. Hoje me sinto mais confiante e no controle da minha vida.',
-    initial: 'C',
-  },
-  {
-    id: 6,
-    name: 'Larissa T.',
-    role: 'Psicóloga',
-    content:
-      'Como colega de profissão, admiro muito o trabalho da Débora. Ela une teoria de ponta com uma prática genuinamente acolhedora. É inspirador ver o cuidado com cada detalhe do processo terapêutico.',
-    initial: 'L',
+      'Débora é uma ótima profissional! Séria e muito empática, senti uma grande melhora em vários aspectos da minha vida após começar o acompanhamento. Recomendo sem reservas!',
+    initial: 'J',
+    rating: 5,
   },
 ];
 
@@ -66,7 +50,7 @@ export function Reviews() {
       className="py-8 px-6 md:px-12 bg-summer-sand scroll-mt-20"
     >
       <div className="max-w-7xl mx-auto">
-        <div className="text-center mb-16 sm:mb-20 reveal">
+        <div className="text-center mb-8 reveal">
           <span className="text-[10px] uppercase tracking-[0.25em] font-bold text-lambs-ear block mb-6 opacity-70">
             Depoimentos
           </span>
@@ -79,33 +63,39 @@ export function Reviews() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
           {testimonials.map((testimonial) => (
             <div
               key={testimonial.id}
-              className="reveal bg-white/40 border-2 border-monstera/15 rounded-2xl sm:rounded-3xl p-6 sm:p-8 hover:border-monstera/30 hover:bg-white/60 transition-all duration-500 group"
+              className="reveal bg-lambs-ear/10 border-2 border-lambs-ear/30 p-8 rounded-2xl hover:bg-lambs-ear/20 hover:border-lambs-ear/50 transition-all duration-300"
             >
-              <div className="flex items-start gap-3 sm:gap-4 mb-5 sm:mb-6">
-                <div className="w-12 h-12 sm:w-14 sm:h-14 rounded-full bg-linear-to-br from-walnut to-lambs-ear flex items-center justify-center shrink-0 group-hover:scale-110 transition-transform duration-500">
-                  <span className="text-white font-display text-xl sm:text-2xl">
-                    {testimonial.initial}
-                  </span>
+              <div className="mb-4">
+                <h3 className="font-bold text-monstera text-base sm:text-lg mb-1">
+                  {testimonial.name}
+                </h3>
+                <div className="flex text-walnut">
+                  {[...Array(5)].map((_, i) => (
+                    <Star key={i} className="w-3 h-3 fill-current" />
+                  ))}
                 </div>
-                <div className="flex-1">
-                  <h3 className="font-display text-lg sm:text-xl text-monstera mb-1">
-                    {testimonial.name}
-                  </h3>
-                  <p className="text-[10px] sm:text-xs uppercase tracking-wider text-walnut opacity-70">
-                    {testimonial.role}
-                  </p>
-                </div>
-                <Quote className="w-8 h-8 text-ginkgo/30 shrink-0" />
               </div>
-              <p className="text-monstera leading-relaxed opacity-90 text-[15px]">
+              <p className="text-monstera/90 leading-relaxed text-sm lg:text-[15px]">
                 {testimonial.content}
               </p>
             </div>
           ))}
+        </div>
+
+        <div className="flex justify-center reveal">
+          <a
+            href="https://www.google.com/search?q=debora+blaso+psicologa"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 px-8 py-4 bg-lambs-ear/10 border-2 border-lambs-ear/30 rounded-full text-monstera font-medium hover:bg-lambs-ear hover:text-white transition-all duration-300 group shadow-sm hover:shadow-lg cursor-pointer"
+          >
+            <span>Ver todas as avaliações no Google</span>
+            <ExternalLink className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+          </a>
         </div>
       </div>
     </section>
