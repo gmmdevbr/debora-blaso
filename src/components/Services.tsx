@@ -1,4 +1,4 @@
-import { ArrowRight, ExternalLink, Mic, Sparkles } from 'lucide-react';
+import { ArrowRight, ExternalLink, Mic, BookOpen } from 'lucide-react';
 import clubeImage from '../assets/images/JFR_2689.webp';
 import talksImage from '../assets/images/JFR_2464.webp';
 
@@ -25,7 +25,7 @@ export function Services() {
               loading="lazy"
             />
             <div className="relative z-20 p-8 sm:p-12 h-full flex flex-col justify-center items-center text-center text-summer-sand">
-              <Sparkles className="w-10 h-10 sm:w-12 sm:h-12 text-ginkgo mb-4 sm:mb-6" />
+              <BookOpen className="w-10 h-10 sm:w-12 sm:h-12 text-ginkgo mb-4 sm:mb-6" />
               <h3 className="font-display text-3xl sm:text-4xl lg:text-5xl mb-4 sm:mb-6">
                 Clube de Psicologia <br />{' '}
                 <span className="italic font-normal text-ginkgo">da Moda.</span>

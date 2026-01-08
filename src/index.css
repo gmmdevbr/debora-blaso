@@ -327,3 +327,41 @@ html {
   pointer-events: none;
   z-index: 1;
 }
+
+/* Instagram Embed Custom Styling */
+.instagram-embed-wrapper {
+  position: relative;
+}
+
+.instagram-embed-wrapper iframe {
+  border-radius: 1rem !important;
+  border: none !important;
+}
+
+/* Override Instagram's default styling to match our design */
+.instagram-embed-wrapper blockquote {
+  border-radius: 1rem !important;
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+/* Crop Instagram embed to show only image */
+.instagram-crop {
+  height: 370px;
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  background: transparent;
+}
+
+/* Hide the Instagram header (profile info) and center the image */
+.instagram-crop iframe,
+.instagram-crop > div {
+  margin-top: -58px;
+  margin-bottom: -100px;
+  width: 100% !important;
+  min-width: 100% !important;
+}

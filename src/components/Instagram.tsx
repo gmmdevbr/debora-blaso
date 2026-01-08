@@ -1,11 +1,7 @@
-import { Instagram as InstagramIcon } from 'lucide-react';
+import { ExternalLink, Instagram as InstagramIcon } from 'lucide-react';
+import { InstagramEmbed } from 'react-social-media-embed';
 
-const images = [
-  'https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&fit=crop&w=400&q=80',
-  'https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&w=400&q=80',
-  'https://images.unsplash.com/photo-1496747611176-843222e1e57c?auto=format&fit=crop&w=400&q=80',
-  'https://images.unsplash.com/photo-1490481651871-ab68de25d43d?auto=format&fit=crop&w=400&q=80',
-];
+const POST_URL = 'https://www.instagram.com/p/DRxuT_wDv-H/';
 
 export function InstagramConnect() {
   return (
@@ -29,18 +25,26 @@ export function InstagramConnect() {
             </a>
           </div>
         </div>
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 reveal delay-200">
-          {images.map((src, index) => (
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 reveal delay-200">
+          {[...Array(4)].map((_, index) => (
             <div
               key={index}
-              className="aspect-square bg-summer-sand/50 rounded-xl overflow-hidden group relative cursor-pointer hover:shadow-2xl border border-monstera/10 hover:border-walnut/30 transition-all duration-300"
+              className="group relative bg-white rounded-2xl overflow-hidden border-2 border-monstera/10 hover:border-lambs-ear/40 transition-all duration-500 ease-in-out hover:shadow-xl"
             >
-              <img
-                src={src}
-                alt={`Instagram post ${index + 1}`}
-                className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
-                loading="lazy"
-              />
+              <div className="instagram-embed-wrapper instagram-crop">
+                <InstagramEmbed
+                  url={POST_URL}
+                  width="100%"
+                />
+              </div>
+              <a
+                href={POST_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="absolute top-4 right-4 z-10 bg-summer-sand/95 backdrop-blur-sm p-2 rounded-full opacity-0 group-hover:opacity-100 transition-all duration-500 ease-in-out hover:bg-lambs-ear"
+              >
+                <ExternalLink className="w-4 h-4 text-monstera" />
+              </a>
             </div>
           ))}
         </div>
