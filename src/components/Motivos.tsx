@@ -96,7 +96,7 @@ function FlipCard({ card }: { card: CardData }) {
     >
       <div className="flip-card-inner h-full">
         <div className="flip-card-front bg-summer-sand text-monstera border border-monstera/10 p-6 sm:p-8 flex flex-col justify-between shadow-lg h-full">
-          <div className="flex flex-col items-center text-center sm:items-start sm:text-left flex-1 justify-center sm:justify-start sm:flex-none">
+          <div className="flex flex-col items-center text-center flex-1 justify-center">
             <div className="w-12 h-12 sm:w-14 sm:h-14 bg-lambs-ear rounded-full flex items-center justify-center shrink-0 mb-6">
               <Icon className="w-5 h-5 sm:w-6 sm:h-6 text-summer-sand" />
             </div>
