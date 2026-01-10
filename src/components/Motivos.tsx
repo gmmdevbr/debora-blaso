@@ -85,7 +85,7 @@ function FlipCard({ card }: { card: CardData }) {
   return (
     <div
       className={cn(
-        'flip-card h-full min-h-[320px] sm:min-h-[400px]',
+        'flip-card h-full min-h-90 sm:min-h-105',
         isFlipped && 'flipped'
       )}
       onClick={handleFlip}
@@ -100,7 +100,7 @@ function FlipCard({ card }: { card: CardData }) {
             <div className="w-12 h-12 sm:w-14 sm:h-14 bg-lambs-ear rounded-full flex items-center justify-center shrink-0 mb-6">
               <Icon className="w-5 h-5 sm:w-6 sm:h-6 text-summer-sand" />
             </div>
-            <h3 className="font-display text-2xl sm:text-3xl leading-[1.1] text-monstera">
+            <h3 className="font-display text-[1.9rem] sm:text-3xl leading-[1.1] text-monstera">
               {card.title.split('&').map((part, i, arr) =>
                 i < arr.length - 1 ? (
                   <span key={part}>
@@ -113,7 +113,7 @@ function FlipCard({ card }: { card: CardData }) {
             </h3>
           </div>
           <div className="pt-6 mt-4 border-t border-monstera/10 w-full flex justify-between items-center opacity-60 gap-2">
-            <span className="text-[10px] uppercase tracking-[0.25em] font-bold">
+            <span className="text-xs sm:text-sm uppercase tracking-[0.22em] font-bold">
               Ver Detalhes
             </span>
             <Plus className="w-4 h-4" />
@@ -129,7 +129,7 @@ function FlipCard({ card }: { card: CardData }) {
                   <span className="text-ginkgo mt-0.5 shrink-0 text-base">
                     •
                   </span>
-                  <span className="text-xs sm:text-[13px] leading-relaxed font-sans text-left">
+                  <span className="text-sm sm:text-base leading-relaxed font-sans text-left">
                     {point.trim()}
                     {point.endsWith('.') ? '' : '.'}
                   </span>
@@ -146,18 +146,18 @@ export function Motivos() {
   return (
     <section
       id="motivos"
-      className="py-8 px-6 md:px-12 bg-summer-sand scroll-mt-20"
+      className="py-12 px-6 md:px-12 bg-summer-sand scroll-mt-20"
     >
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16 sm:mb-20 reveal">
-          <h2 className="font-display text-3xl sm:text-4xl lg:text-6xl tracking-tighter mb-6 leading-tight text-monstera">
+          <h2 className="font-display text-4xl sm:text-5xl lg:text-6xl tracking-tighter mb-6 leading-tight text-monstera">
             Cada pessoa tem um motivo <br className="hidden sm:block" />
             para fazer terapia.{' '}
             <span className="text-walnut italic font-script">
               Qual é o seu?
             </span>
           </h2>
-          <p className="text-[10px] uppercase tracking-[0.25em] font-bold opacity-60 text-monstera">
+          <p className="text-xs uppercase tracking-[0.22em] font-bold opacity-60 text-monstera">
             Toque nos cards para revelar
           </p>
         </div>

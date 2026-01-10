@@ -6,7 +6,7 @@ export function Services() {
   return (
     <section
       id="servicos"
-      className="py-8 px-6 md:px-12 bg-summer-sand scroll-mt-20"
+      className="py-12 px-6 md:px-12 bg-summer-sand scroll-mt-20"
     >
       <div className="max-w-7xl mx-auto">
         <div className="mb-16 sm:mb-20 text-center reveal">
@@ -16,7 +16,7 @@ export function Services() {
         </div>
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8">
           {/* Clube */}
-          <div className="relative group overflow-hidden rounded-[2rem] sm:rounded-[3rem] h-[450px] sm:h-[500px] reveal shadow-2xl cursor-pointer">
+          <div className="relative group overflow-hidden rounded-4xl sm:rounded-[3rem] h-112 sm:h-128 reveal shadow-2xl cursor-pointer">
             <div className="absolute inset-0 bg-monstera/75 z-10 transition-colors duration-500 ease-in-out group-hover:bg-monstera/80" />
             <img
               src={clubeImage}
@@ -34,14 +34,14 @@ export function Services() {
                 href="https://psicologiadamoda.club"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 bg-ginkgo text-monstera px-8 py-3 rounded-sm text-[10px] font-bold uppercase tracking-widest hover:bg-lambs-ear hover:text-summer-sand transition-all duration-500 ease-in-out"
+                className="inline-flex items-center gap-2 bg-ginkgo text-monstera px-9 py-3.5 rounded-sm text-sm font-bold uppercase tracking-[0.18em] hover:bg-lambs-ear hover:text-summer-sand transition-all duration-500 ease-in-out"
               >
                 Conhecer o Clube <ExternalLink className="w-4 h-4" />
               </a>
             </div>
           </div>
           {/* Palestras */}
-          <div className="relative group overflow-hidden rounded-[2rem] sm:rounded-[3rem] h-[450px] sm:h-[500px] reveal shadow-2xl cursor-pointer">
+          <div className="relative group overflow-hidden rounded-4xl sm:rounded-[3rem] h-112 sm:h-128 reveal shadow-2xl cursor-pointer">
             <div className="absolute inset-0 bg-monstera/70 z-10 transition-colors duration-500 ease-in-out group-hover:bg-monstera/75" />
             <img
               src={talksImage}
@@ -59,7 +59,7 @@ export function Services() {
                 href="https://wa.me/5531972348221?text=Oi%20D%C3%A9bora%2C%20vim%20pelo%20seu%20site%20e%20gostaria%20de%20saber%20mais%20sobre%20o%20seu%20trabalho"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 bg-ginkgo text-monstera px-8 py-3 rounded-sm text-[10px] font-bold uppercase tracking-widest hover:bg-lambs-ear hover:text-summer-sand transition-all duration-500 ease-in-out"
+                className="inline-flex items-center gap-2 bg-ginkgo text-monstera px-9 py-3.5 rounded-sm text-sm font-bold uppercase tracking-[0.18em] hover:bg-lambs-ear hover:text-summer-sand transition-all duration-500 ease-in-out"
               >
                 Solicitar Proposta <ArrowRight className="w-4 h-4" />
               </a>

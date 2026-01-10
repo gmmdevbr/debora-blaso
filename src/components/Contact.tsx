@@ -9,7 +9,7 @@ export function Contact() {
           <br />
           Fale comigo no WhatsApp!
         </h2>
-        <p className="text-base sm:text-lg text-muted mb-8 sm:mb-10 leading-relaxed">
+        <p className="text-lg sm:text-xl text-muted mb-8 sm:mb-10 leading-relaxed">
           Dúvidas sobre como a terapia funciona ou se este é o momento certo?
           Estou aqui para esclarecer.
         </p>

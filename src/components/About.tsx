@@ -47,7 +47,7 @@ export function About() {
   return (
     <section
       id="sobre"
-      className="py-8 px-6 md:px-12 bg-summer-sand scroll-mt-20"
+      className="py-12 px-6 md:px-12 bg-summer-sand scroll-mt-20"
     >
       <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-24 items-start">
         <div className="order-2 lg:order-1 reveal">
@@ -57,7 +57,7 @@ export function About() {
               Débora Blaso?
             </span>
           </h2>
-          <div className="space-y-5 sm:space-y-6 text-base sm:text-lg text-muted leading-relaxed text-left font-sans">
+          <div className="space-y-5 sm:space-y-6 text-lg sm:text-xl text-muted leading-relaxed text-left font-sans">
             <p>
               Meu trabalho é voltado para mulheres que estão oficialmente
               cansadas de tentar dar conta de tudo — carreira, aparência,
@@ -78,7 +78,7 @@ export function About() {
 
           <div className="mt-12 space-y-12">
             <div>
-              <span className="text-[10px] uppercase tracking-[0.25em] font-bold text-lambs-ear block mb-6 border-b border-monstera/10 pb-2">
+              <span className="text-xs uppercase tracking-[0.22em] font-bold text-lambs-ear block mb-6 border-b border-monstera/10 pb-2">
                 Formações & Certificações
               </span>
               <ul className="space-y-3">
@@ -87,7 +87,7 @@ export function About() {
                   return (
                     <li
                       key={index}
-                      className="flex items-start gap-3 text-monstera text-[13px] sm:text-xs leading-relaxed"
+                      className="flex items-start gap-3 text-monstera text-sm sm:text-base leading-relaxed"
                     >
                       <Icon className="w-4 h-4 text-lambs-ear shrink-0 mt-0.5" />
                       <span>{item.text}</span>
@@ -97,14 +97,14 @@ export function About() {
               </ul>
             </div>
             <div>
-              <span className="text-[10px] uppercase tracking-[0.25em] font-bold text-lambs-ear block mb-6 border-b border-monstera/10 pb-2">
+              <span className="text-xs uppercase tracking-[0.22em] font-bold text-lambs-ear block mb-6 border-b border-monstera/10 pb-2">
                 Valores Pessoais
               </span>
               <div className="grid grid-cols-2 gap-4">
                 {values.map((value, index) => (
                   <div key={index} className="flex items-center gap-2">
                     <div className="w-1.5 h-1.5 rounded-full bg-lambs-ear" />
-                    <span className="text-sm font-bold text-monstera">
+                    <span className="text-base font-bold text-monstera">
                       {value}
                     </span>
                   </div>

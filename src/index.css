@@ -124,8 +124,8 @@
   --color-muted: #505050;         /* Muted Text */
 
   /* Spacing Rhythm - Aligned with §1.3 */
-  --space-section-y: 3rem;        /* Section vertical spacing - reduced for compact layout */
-  --space-section-x: 1.5rem;      /* Mobile horizontal padding */
+  --space-section-y: 4.5rem;      /* Section vertical spacing - mobile breathing room */
+  --space-section-x: 1.75rem;     /* Mobile horizontal padding */
 
   /* Animation */
   --animate-spin-slow: spin 12s linear infinite;
@@ -158,7 +158,8 @@ body {
   color: var(--color-monstera);
   overflow-x: hidden;
   font-family: var(--font-sans);
-  line-height: 1.5;
+  font-size: 17px;
+  line-height: 1.65;
 }
 
 /* Selection Color */

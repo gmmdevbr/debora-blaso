@@ -47,7 +47,7 @@ export function Reviews() {
   return (
     <section
       id="reviews"
-      className="py-8 px-6 md:px-12 bg-summer-sand scroll-mt-20"
+      className="py-12 px-6 md:px-12 bg-summer-sand scroll-mt-20"
     >
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-8 reveal">
@@ -57,7 +57,7 @@ export function Reviews() {
           <h2 className="font-display text-4xl sm:text-5xl lg:text-7xl mb-6 leading-none text-monstera">
             O que dizem sobre o processo
           </h2>
-          <p className="text-base sm:text-lg opacity-80 leading-relaxed text-monstera max-w-3xl mx-auto">
+          <p className="text-lg sm:text-xl opacity-80 leading-relaxed text-monstera max-w-3xl mx-auto">
             Cada trajetória é única, mas todas compartilham a busca por
             transformação genuína.
           </p>
@@ -70,7 +70,7 @@ export function Reviews() {
               className="reveal bg-lambs-ear/10 border-2 border-lambs-ear/30 p-8 rounded-2xl hover:bg-lambs-ear/20 hover:border-lambs-ear/50 transition-all duration-300"
             >
               <div className="mb-4">
-                <h3 className="font-bold text-monstera text-base sm:text-lg mb-1">
+                <h3 className="font-bold text-monstera text-lg sm:text-xl mb-1">
                   {testimonial.name}
                 </h3>
                 <div className="flex text-walnut">
@@ -79,7 +79,7 @@ export function Reviews() {
                   ))}
                 </div>
               </div>
-              <p className="text-monstera/90 leading-relaxed text-sm lg:text-[15px]">
+              <p className="text-monstera/90 leading-relaxed text-base lg:text-lg">
                 {testimonial.content}
               </p>
             </div>

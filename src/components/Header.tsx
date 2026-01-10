@@ -36,7 +36,7 @@ export function Header() {
           </a>
 
           {/* Desktop Nav */}
-          <nav className="hidden lg:flex items-center gap-8 text-[11px] font-bold uppercase tracking-[0.2em] text-monstera">
+          <nav className="hidden lg:flex items-center gap-9 text-sm font-bold uppercase tracking-[0.16em] text-monstera">
             <a
               href="#sobre"
               className="hover:text-lambs-ear transition-colors relative py-1 hover:after:w-full after:absolute after:bottom-0 after:left-0 after:w-0 after:h-px after:bg-lambs-ear after:transition-all"
@@ -65,7 +65,7 @@ export function Header() {
               href="https://wa.me/5531972348221?text=Oi%20D%C3%A9bora%2C%20vim%20pelo%20seu%20site%20e%20gostaria%20de%20saber%20mais%20sobre%20o%20seu%20trabalho"
               target="_blank"
               rel="noopener noreferrer"
-              className="bg-monstera text-summer-sand px-6 py-2 rounded-sm hover:bg-lambs-ear hover:text-white transition-all shadow-lg"
+              className="bg-monstera text-summer-sand px-6 py-3 rounded-sm hover:bg-lambs-ear hover:text-white transition-all shadow-lg text-sm tracking-[0.14em]"
             >
               Agendar
             </a>
@@ -128,7 +128,7 @@ export function Header() {
             target="_blank"
             rel="noopener noreferrer"
             onClick={closeMenu}
-            className="text-sm font-sans uppercase tracking-widest bg-monstera text-ginkgo px-10 py-4 mt-4 shadow-xl"
+            className="text-base font-sans uppercase tracking-[0.18em] bg-monstera text-ginkgo px-12 py-5 mt-4 shadow-xl rounded-sm"
           >
             Agendar WhatsApp
           </a>

@@ -16,11 +16,11 @@ export function Hero() {
         <div className="lg:grid lg:grid-cols-12 lg:gap-16">
           {/* Content - Centered with background image on all devices */}
           <div className="lg:col-span-7 reveal">
-            <h1 className="font-display text-[2.5rem] sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl leading-[1.05] sm:leading-[0.95] tracking-tight mb-8 sm:mb-10 text-monstera">
+            <h1 className="font-display text-[2.75rem] sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl leading-[1.05] sm:leading-[0.95] tracking-tight mb-8 sm:mb-10 text-monstera">
               Traduzindo complexidades em caminhos possíveis
             </h1>
 
-            <p className="text-base sm:text-lg lg:text-xl max-w-lg text-muted mb-10 sm:mb-12 leading-relaxed pl-5 sm:pl-6 border-l-2 border-ginkgo">
+            <p className="text-lg sm:text-xl lg:text-2xl max-w-xl text-muted mb-10 sm:mb-12 leading-relaxed pl-5 sm:pl-6 border-l-2 border-ginkgo">
               Dê um passo em direção a uma vida com mais sentido, olhando para
               si com presença e cuidado.
             </p>
@@ -28,7 +28,7 @@ export function Hero() {
             <div className="flex flex-col sm:flex-row gap-4">
               <a
                 href="#sobre"
-                className="inline-flex items-center justify-center h-14 sm:h-14 px-8 sm:px-10 bg-monstera text-white text-[11px] sm:text-xs font-bold uppercase tracking-[0.2em] shadow-2xl hover:bg-lambs-ear hover:shadow-lambs-ear/50 transition-all duration-300 group"
+                className="inline-flex items-center justify-center h-14 sm:h-14 px-10 sm:px-12 bg-monstera text-white text-sm sm:text-base font-bold uppercase tracking-[0.16em] shadow-2xl hover:bg-lambs-ear hover:shadow-lambs-ear/50 transition-all duration-300 group rounded-sm"
               >
                 Conhecer a Profissional{' '}
                 <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />

@@ -5,14 +5,14 @@ const POST_URL = 'https://www.instagram.com/p/DRxuT_wDv-H/';
 
 export function InstagramConnect() {
   return (
-    <section className="py-8 px-6 md:px-12 bg-summer-sand overflow-hidden">
+    <section className="py-12 px-6 md:px-12 bg-summer-sand overflow-hidden">
       <div className="max-w-7xl mx-auto">
         <div className="flex flex-col md:flex-row justify-between items-center md:items-end mb-12 reveal text-center md:text-left">
           <div>
             <h2 className="font-display text-4xl lg:text-5xl text-monstera mb-3">
               Conecte-se comigo
             </h2>
-            <p className="text-muted max-w-md mb-2 md:mb-3">
+            <p className="text-lg text-muted max-w-md mb-2 md:mb-3">
               Insights diários sobre comportamento, estilo e vida real.
             </p>
             <a
