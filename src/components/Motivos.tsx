@@ -85,7 +85,7 @@ function FlipCard({ card }: { card: CardData }) {
   return (
     <div
       className={cn(
-        'flip-card h-full min-h-90 sm:min-h-105',
+        'flip-card h-full min-h-90 sm:min-h-115',
         isFlipped && 'flipped'
       )}
       onClick={handleFlip}

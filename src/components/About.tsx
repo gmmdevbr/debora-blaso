@@ -49,7 +49,7 @@ export function About() {
       id="sobre"
       className="py-12 px-6 md:px-12 bg-summer-sand scroll-mt-20"
     >
-      <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-24 items-start">
+      <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
         <div className="order-2 lg:order-1 reveal">
           <h2 className="font-display text-4xl sm:text-5xl lg:text-7xl tracking-tighter leading-none mb-8 sm:mb-10 text-monstera">
             Quem é <br />{' '}
