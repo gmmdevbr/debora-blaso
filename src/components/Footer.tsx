@@ -1,6 +1,6 @@
 export function Footer() {
   return (
-    <footer className="bg-monstera text-summer-sand py-12 sm:py-16 px-6 md:px-12 border-t-2 border-summer-sand/10">
+    <footer className="bg-monstera text-summer-sand py-12 px-6 md:px-12 border-t-2 border-summer-sand/10">
       <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-6 sm:gap-8 text-center md:text-left">
         <div>
           <img

@@ -10,7 +10,8 @@ export function Abordagem() {
             Minha Abordagem
           </span>
           <h2 className="font-display text-4xl sm:text-5xl lg:text-7xl mb-4 sm:mb-6 leading-none text-monstera">
-            Base científica. Sensibilidade humana.
+            Base científica. <br className="hidden sm:block" />
+            <span className="italic text-walnut font-script">Sensibilidade humana.</span>
           </h2>
           <p className="text-xl opacity-80 leading-relaxed mb-8 text-monstera">
             Atuo com base na Psicologia Cognitivo-Comportamental (TCC), com

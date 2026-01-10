@@ -1,7 +1,12 @@
 import { ExternalLink, Instagram as InstagramIcon } from 'lucide-react';
 import { InstagramEmbed } from 'react-social-media-embed';
 
-const POST_URL = 'https://www.instagram.com/p/DRxuT_wDv-H/';
+const POST_URLS = [
+  'https://www.instagram.com/p/DRxuT_wDv-H/',
+  'https://www.instagram.com/p/DTQ0YIIkvgG/',
+  'https://www.instagram.com/p/DSNKXEFDjVo/',
+  'https://www.instagram.com/p/DTOdE1rDvsh/',
+];
 
 export function InstagramConnect() {
   return (
@@ -26,19 +31,19 @@ export function InstagramConnect() {
           </div>
         </div>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 reveal delay-200">
-          {[...Array(4)].map((_, index) => (
+          {POST_URLS.map((url, index) => (
             <div
               key={index}
               className="group relative bg-white rounded-2xl overflow-hidden border-2 border-monstera/10 hover:border-lambs-ear/40 transition-all duration-500 ease-in-out hover:shadow-xl"
             >
               <div className="instagram-embed-wrapper instagram-crop">
                 <InstagramEmbed
-                  url={POST_URL}
+                  url={url}
                   width="100%"
                 />
               </div>
               <a
-                href={POST_URL}
+                href={url}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="absolute top-4 right-4 z-10 bg-summer-sand/95 backdrop-blur-sm p-2 rounded-full opacity-0 group-hover:opacity-100 transition-all duration-500 ease-in-out hover:bg-lambs-ear"

@@ -27,18 +27,18 @@ const testimonials: Testimonial[] = [
   },
   {
     id: 3,
-    name: 'Giselle Santosa',
+    name: 'Marcela Borges',
     content:
-      'Profissional incrível, super atenta e empática. Consegue ajudar a entender melhor os pensamentos e emoções de uma forma muito acolhedora. Recomendo de coração!',
-    initial: 'G',
+      'Processo incrível, os resultados são sustentáveis pois são conectados a valores pessoais, considerando a nossa individualidade. No meu caso foi aliado com Coach de carreira, também pela Debora Blaso, o que enriqueceu demais a construção da postura que o novo cargo recebido demandava. Investimento para a vida, recomendo!',
+    initial: 'M',
     rating: 5,
   },
   {
     id: 4,
-    name: 'Julia Vilela',
+    name: 'Amanda Cruz',
     content:
-      'Débora é uma ótima profissional! Séria e muito empática, senti uma grande melhora em vários aspectos da minha vida após começar o acompanhamento. Recomendo sem reservas!',
-    initial: 'J',
+      'Tive muita sorte de encontrar a Débora como a minha primeira psicóloga. A terapia me ajudou tanto nos últimos anos, sempre com muito profissionalismo e humanidade. Recomendo 100% como profissional.',
+    initial: 'A',
     rating: 5,
   },
 ];
