@@ -9,7 +9,7 @@ export function Footer() {
             className="h-7 sm:h-8 w-auto mb-2 sm:mb-3 mx-auto md:mx-0 brightness-0 invert"
           />
           <span className="text-xs lg:text-[10px] uppercase tracking-[0.18em] lg:tracking-[0.2em] opacity-60 block mt-2">
-            CRP 12/XXXXX • Psicologia & Imagem
+            CRP 04/39485 • Psicologia & Imagem
           </span>
         </div>
         <div className="flex flex-wrap justify-center gap-6 sm:gap-8 text-sm lg:text-[11px] font-bold uppercase tracking-[0.16em] lg:tracking-[0.2em] opacity-70">
