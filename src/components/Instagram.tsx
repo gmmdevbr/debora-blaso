@@ -2,9 +2,9 @@ import { ExternalLink, Instagram as InstagramIcon } from 'lucide-react';
 import { InstagramEmbed } from 'react-social-media-embed';
 
 const POST_URLS = [
+  'https://www.instagram.com/p/DTgSKLlEmjg/',
   'https://www.instagram.com/p/DRxuT_wDv-H/',
   'https://www.instagram.com/p/DTQ0YIIkvgG/',
-  'https://www.instagram.com/p/DSNKXEFDjVo/',
   'https://www.instagram.com/p/DTOdE1rDvsh/',
 ];
 
