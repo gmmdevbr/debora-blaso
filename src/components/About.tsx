@@ -10,7 +10,7 @@ import aboutImage from '../assets/images/JFR_2139.webp';
 
 export function About() {
   const formations = [
-    { icon: GraduationCap, text: 'Graduação em Psicologia – PUC Minas' },
+    { icon: GraduationCap, text: 'Graduação em Psicologia – PUC Minas (CRP 04/39485)' },
     {
       icon: Award,
       text: 'Pós-Graduação em Terapias Comportamentais Contextuais – Unifil',
