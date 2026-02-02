@@ -39,5 +39,17 @@ export default function initPosthog() {
     },
   });
 
+  // Expose to window for compatibility with snippets / console debugging
+  try {
+    // Use a safe cast to avoid TS errors
+    (window as any).posthog = posthog;
+    if (import.meta.env.MODE === 'development') {
+      // eslint-disable-next-line no-console
+      console.info('[posthog] window.posthog is set');
+    }
+  } catch (e) {
+    // ignore failures (very unlikely)
+  }
+
   return posthog;
 }
