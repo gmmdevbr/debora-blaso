@@ -1,6 +1,7 @@
 import { StrictMode } from 'react';
 import { createRoot } from 'react-dom/client';
 import { Analytics } from '@vercel/analytics/react';
+import { PostHogProvider } from 'posthog-js/react';
 import './index.css';
 import App from './App.tsx';
 
@@ -8,8 +9,18 @@ const rootElement = document.getElementById('root');
 if (rootElement) {
   createRoot(rootElement).render(
     <StrictMode>
-      <App />
-      <Analytics />
+      <PostHogProvider
+        apiKey={import.meta.env.VITE_PUBLIC_POSTHOG_KEY}
+        options={{
+          api_host: import.meta.env.VITE_PUBLIC_POSTHOG_HOST,
+          defaults: '2025-05-24',
+          capture_exceptions: true, // This enables capturing exceptions using Error Tracking, set to false if you don't want this
+          debug: import.meta.env.MODE === 'development',
+        }}
+      >
+        <App />
+        <Analytics />
+      </PostHogProvider>
     </StrictMode>
   );
 }
