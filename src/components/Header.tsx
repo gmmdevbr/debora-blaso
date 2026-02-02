@@ -31,8 +31,15 @@ export function Header() {
         )}
       >
         <div className="max-w-7xl mx-auto flex justify-between items-center">
-          <a href="#" className="group z-50 flex items-center mr-4 md:mr-6 lg:mr-8">
-            <img src="/logo-horizontal.svg" alt="Débora Blaso" className="h-14 sm:h-16 lg:h-20 w-auto object-contain" />
+          <a
+            href="#"
+            className="group z-50 flex items-center mr-4 md:mr-6 lg:mr-8"
+          >
+            <img
+              src="/logo-horizontal.svg"
+              alt="Débora Blaso"
+              className="h-14 sm:h-16 lg:h-20 w-auto object-contain"
+            />
           </a>
 
           {/* Desktop Nav */}

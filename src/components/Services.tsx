@@ -1,6 +1,6 @@
-import { ArrowRight, ExternalLink, Mic, BookOpen } from 'lucide-react';
-import clubeImage from '../assets/images/JFR_2689.webp';
+import { ArrowRight, BookOpen, ExternalLink, Mic } from 'lucide-react';
 import talksImage from '../assets/images/JFR_2464.webp';
+import clubeImage from '../assets/images/JFR_2689.webp';
 
 export function Services() {
   return (

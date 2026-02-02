@@ -37,10 +37,7 @@ export function InstagramConnect() {
               className="group relative bg-white rounded-2xl overflow-hidden border-2 border-monstera/10 hover:border-lambs-ear/40 transition-all duration-500 ease-in-out hover:shadow-xl"
             >
               <div className="instagram-embed-wrapper instagram-crop">
-                <InstagramEmbed
-                  url={url}
-                  width="100%"
-                />
+                <InstagramEmbed url={url} width="100%" />
               </div>
               <a
                 href={url}

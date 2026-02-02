@@ -1,4 +1,4 @@
-import { Star, ExternalLink } from 'lucide-react';
+import { ExternalLink, Star } from 'lucide-react';
 
 interface Testimonial {
   id: number;

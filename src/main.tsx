@@ -1,32 +1,29 @@
+import { PostHogProvider } from '@posthog/react';
+import { Analytics } from '@vercel/analytics/react';
 import { StrictMode } from 'react';
 import { createRoot } from 'react-dom/client';
-import { Analytics } from '@vercel/analytics/react';
-import posthog from 'posthog-js';
-import { PostHogProvider } from '@posthog/react';
 import './index.css';
 import App from './App.tsx';
+import initPosthog from './lib/posthog';
 
-// INICIALIZAÇÃO DO SDK (Essencial para o Autocapture funcionar)
-if (typeof window !== 'undefined') {
-  posthog.init(import.meta.env.VITE_PUBLIC_POSTHOG_KEY, {
-    api_host: import.meta.env.VITE_PUBLIC_POSTHOG_HOST,
-    person_profiles: 'identified_only',
-    capture_pageview: true, // Rastreia trocas de página automaticamente
-    loaded: (ph) => {
-      // Ativa o modo debug apenas em desenvolvimento
-      if (import.meta.env.MODE === 'development') ph.debug();
-    },
-  });
-}
+// Initialize PostHog safely (guards SSR and missing env vars)
+const posthogClient = initPosthog();
 
 const rootElement = document.getElementById('root');
 if (rootElement) {
   createRoot(rootElement).render(
     <StrictMode>
-      <PostHogProvider client={posthog}>
-        <App />
-        <Analytics />
-      </PostHogProvider>
+      {posthogClient ? (
+        <PostHogProvider client={posthogClient}>
+          <App />
+          <Analytics />
+        </PostHogProvider>
+      ) : (
+        <>
+          <App />
+          <Analytics />
+        </>
+      )}
     </StrictMode>
   );
 }
