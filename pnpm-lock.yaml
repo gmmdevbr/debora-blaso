@@ -8,6 +8,9 @@ importers:
 
   .:
     dependencies:
+      '@posthog/react':
+        specifier: ^1.7.0
+        version: 1.7.0(@types/react@19.2.7)(posthog-js@1.336.4)(react@19.2.3)
       '@vercel/analytics':
         specifier: ^1.6.1
         version: 1.6.1(react@19.2.3)
@@ -449,6 +452,16 @@ packages:
 
   '@posthog/core@1.17.0':
     resolution: {integrity: sha512-8pDNL+/u9ojzXloA5wILVDXBCV5daJ7w2ipCALQlEEZmL752cCKhRpbyiHn3tjKXh3Hy6aOboJneYa1JdlVHrQ==}
+
+  '@posthog/react@1.7.0':
+    resolution: {integrity: sha512-pM7GL7z/rKjiIwosbRiQA3buhLI6vUo+wg+T/ZrVZC7O5bVU07TfgNZTcuOj8E9dx7vDbfNrc1kjDN7PKMM8ug==}
+    peerDependencies:
+      '@types/react': '>=16.8.0'
+      posthog-js: '>=1.257.2'
+      react: '>=16.8.0'
+    peerDependenciesMeta:
+      '@types/react':
+        optional: true
 
   '@posthog/types@1.336.4':
     resolution: {integrity: sha512-BY3cq/8segbXEvHbEXx9SWmaKJEM0AGgsOgMFH2yy13AV+rUHsGcp4Z5LDI5pU25DURN9EAZvzcoVyYy/Iokmw==}
@@ -1512,6 +1525,13 @@ snapshots:
   '@posthog/core@1.17.0':
     dependencies:
       cross-spawn: 7.0.6
+
+  '@posthog/react@1.7.0(@types/react@19.2.7)(posthog-js@1.336.4)(react@19.2.3)':
+    dependencies:
+      posthog-js: 1.336.4
+      react: 19.2.3
+    optionalDependencies:
+      '@types/react': 19.2.7
 
   '@posthog/types@1.336.4': {}
 
