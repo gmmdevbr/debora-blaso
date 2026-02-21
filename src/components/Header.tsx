@@ -31,12 +31,19 @@ export function Header() {
         )}
       >
         <div className="max-w-7xl mx-auto flex justify-between items-center">
-          <a href="#" className="group z-50 flex items-center">
-            <img src="/logo.svg" alt="Débora Blaso" className="h-7 w-auto" />
+          <a
+            href="#"
+            className="group z-50 flex items-center mr-4 md:mr-6 lg:mr-8"
+          >
+            <img
+              src="/logo-horizontal.svg"
+              alt="Débora Blaso"
+              className="h-14 sm:h-16 lg:h-20 w-auto object-contain"
+            />
           </a>
 
           {/* Desktop Nav */}
-          <nav className="hidden lg:flex items-center gap-9 text-sm font-bold uppercase tracking-[0.16em] text-monstera">
+          <nav className="hidden lg:flex items-baseline gap-9 text-sm font-bold uppercase tracking-[0.16em] text-monstera pb-8">
             <a
               href="#sobre"
               className="hover:text-lambs-ear transition-colors relative py-1 hover:after:w-full after:absolute after:bottom-0 after:left-0 after:w-0 after:h-px after:bg-lambs-ear after:transition-all"
@@ -75,7 +82,7 @@ export function Header() {
           <button
             type="button"
             onClick={toggleMenu}
-            className="lg:hidden z-50 text-monstera p-2"
+            className="lg:hidden z-50 text-monstera p-2 pb-9"
             aria-label="Toggle menu"
           >
             {isMenuOpen ? (
