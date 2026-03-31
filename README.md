@@ -129,7 +129,5 @@ This project follows strict principles:
 
 ## 📞 Contact
 
-For professional inquiries, please contact through:
-- WhatsApp: [Link]
-- Instagram: [@debora.blaso](https://instagram.com/debora.blaso)
-- Website: [psicologiadamoda.club](https://debora-blaso.my.canva.site/)
+contact@gmartins.dev
+
