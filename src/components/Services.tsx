@@ -31,7 +31,7 @@ export function Services() {
                 <span className="italic font-normal text-ginkgo">da Moda.</span>
               </h3>
               <a
-                href="https://debora-blaso.my.canva.site/"
+                href="https://www.psicologiadamoda.club"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 bg-ginkgo text-monstera px-9 py-3.5 rounded-sm text-sm font-bold uppercase tracking-[0.18em] hover:bg-lambs-ear hover:text-summer-sand transition-all duration-500 ease-in-out"
